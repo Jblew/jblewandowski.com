@@ -22,4 +22,4 @@ cp -R "${SITE_ROOT_DIR}/_site" "${DIST_DIR}"
 
 mkdir "${SITE_BLOG_DIR}"
 "${SITE_BLOG_DIR}/build.sh"
-cp -R "${SITE_BLOG_DIR}/dist" "${SITE_BLOG_DIR}"
+cp -R "${SITE_BLOG_DIR}/public" "${DIST_DIR}/blog"
