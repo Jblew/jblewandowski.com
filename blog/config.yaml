@@ -1,0 +1,73 @@
+baseURL: https://jedrzej.lewandowski.doctor/blog
+languageCode: en-us
+defaultContentLanguage: en
+title: Jędrzej Lewandowski (J-J) blog
+theme: cupper-hugo-theme
+enableGitInfo: true
+
+permalinks:
+  posts: /:year/:month/:title/
+
+imaging:
+  quality: 99
+
+params:
+  description: Blog of Jędrzej (pronounce J-J) Lewandowski. Doctor, software developer and behaviorist.
+  homeMetaContent: Blog of Jędrzej (pronounce J-J) Lewandowski. Doctor, software developer and behaviorist.
+  footer: Made with [Hugo](https://gohugo.io/). Themed by [Cupper](https://github.com/zwbetz-gh/cupper-hugo-theme).
+  # For more date formats see https://gohugo.io/functions/format/
+  dateFormat: Jan 2, 2006
+  katex: false
+  hideHeaderLinks: false
+  search: false
+  customCss:
+  customJs:
+
+menu:
+  nav:
+    - name: Blog
+      url: /
+      weight: 1
+    - name: CV
+      url: https://jedrzej.lewandowski.doctor/
+      weight: 2
+    - name: Tags
+      url: /tags/
+      weight: 3
+    - name: About
+      url: /about/
+      weight: 4
+    - name: RSS
+      url: /index.xml
+      weight: 5
+
+markup:
+  defaultMarkdownHandler: goldmark
+  goldmark:
+    extensions:
+      definitionList: true
+      footnote: true
+      linkify: true
+      strikethrough: true
+      table: true
+      taskList: true
+      typographer: true
+    parser:
+      attribute: true
+      autoHeadingID: true
+    renderer:
+      hardWraps: false
+      unsafe: true
+      xHTML: false
+  highlight:
+    codeFences: false
+    hl_Lines: ""
+    lineNoStart: 1
+    lineNos: false
+    lineNumbersInTable: true
+    noClasses: true
+    style: monokai
+    tabWidth: 4
+  tableOfContents:
+    endLevel: 6
+    startLevel: 2
