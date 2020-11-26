@@ -8,6 +8,9 @@ enableGitInfo: true
 permalinks:
   posts: /:year/:month/:title/
 
+taxonomies:
+  tag: tags
+
 imaging:
   quality: 99
 
