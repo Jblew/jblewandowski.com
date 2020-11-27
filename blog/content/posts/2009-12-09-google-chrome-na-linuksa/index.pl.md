@@ -12,3 +12,5 @@ tags:
 > 
 
 Tak. Stało się to, na co czekało wielu użytkowników linuksa – Google wydało wersję przeglądarki Chrome przeznaczoną na linuksa. Narazie przeglądarka posiada wersję tylko na kilka dystrybucji – na Debiana, Ubunty, Fedorę i OpenSUSE. Wcześniej był już dostępny rozwijany przez społeczność odpowiednik Chroma – przeglądarka Chromium. Jednak wydajnością i estetyką daleko jej było do przeglądarki Google.
+
+![Google Chrome na linuksie 2009!](chrome_os.png)
