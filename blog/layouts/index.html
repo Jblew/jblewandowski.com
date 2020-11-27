@@ -6,6 +6,7 @@
         <span class="subtitle">{{.}}</span>
         {{ end }}
     </header>
+    <div>{{ .Content }}</div>
     <div>
         {{- range ( where site.RegularPages "Section" "posts" ) }}
             <h2>{{ .Title }}</h2>

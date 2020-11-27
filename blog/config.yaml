@@ -1,15 +1,24 @@
-baseURL: https://jedrzej.lewandowski.doctor/blog
-languageCode: en-us
-defaultContentLanguage: en
-title: Jędrzej Lewandowski (J-J) blog
-theme: cupper-hugo-theme
+baseURL: https://jedrzej.lewandowski.doctor/
+defaultContentLanguage: pl
+theme: jblew-on-cupper-hugo-theme
 enableGitInfo: true
+
+languages:
+  pl:
+    languageName: Polski
+    title: Jędrzej Lewandowski (J-J) — programista i student medycyny
+    taxonomies:
+      tag: tagi
+    weight: 1
+  en:
+    languageName: English
+    title: Jędrzej Lewandowski (J-J) — software developer and medical student
+    taxonomies:
+      tag: tags
+    weight: 2
 
 permalinks:
   posts: /:year/:month/:title/
-
-taxonomies:
-  tag: tags
 
 imaging:
   quality: 99
@@ -33,7 +42,7 @@ menu:
       url: /
       weight: 1
     - name: CV
-      url: https://jedrzej.lewandowski.doctor/
+      url: /cv/
       weight: 2
     - name: Tags
       url: /tags/
