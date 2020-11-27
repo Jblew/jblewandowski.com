@@ -1,0 +1,3 @@
+[submodule "blog/themes/jblew-on-cupper-hugo-theme"]
+	path = blog/themes/jblew-on-cupper-hugo-theme
+	url = git@github.com:Jblew/jblew-on-cupper-hugo-theme.git
