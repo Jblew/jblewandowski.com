@@ -9,12 +9,14 @@ languages:
     title: Jędrzej Lewandowski (J-J) — programista i student medycyny
     taxonomies:
       tag: tagi
+      categories: kategorie
     weight: 1
   en:
     languageName: English
     title: Jędrzej Lewandowski (J-J) — software developer and medical student
     taxonomies:
       tag: tags
+      categories: categories
     weight: 2
 
 permalinks:
