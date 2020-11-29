@@ -5,6 +5,7 @@ aliases:
   - /index.php/2009/11/jak-zostalem-posiadaczem-ubuntu/
   - /2009/11/jak-zostalem-posiadaczem-ubuntu/
 category:
+ - fun
 tag:
 ---
 

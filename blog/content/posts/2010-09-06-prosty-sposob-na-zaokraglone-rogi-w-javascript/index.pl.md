@@ -5,6 +5,7 @@ aliases:
   - /index.php/2010/09/prosty-sposob-na-zaokraglone-rogi-w-javascript/
   - /2010/09/prosty-sposob-na-zaokraglone-rogi-w-javascript/
 category:
+  - programowanie
 tag:
 ---
 

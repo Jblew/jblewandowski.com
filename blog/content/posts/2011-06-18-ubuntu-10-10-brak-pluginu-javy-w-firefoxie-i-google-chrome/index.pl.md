@@ -5,6 +5,7 @@ aliases:
   - /index.php/2011/06/ubuntu-10-10-brak-pluginu-javy-w-firefoxie-i-google-chrome/
   - /2011/06/ubuntu-10-10-brak-pluginu-javy-w-firefoxie-i-google-chrome/
 category:
+  - inne
 tag:
 ---
 

@@ -5,6 +5,7 @@ aliases:
   - /index.php/2010/10/bardzo-proste-aktywne-obciazenie/
   - /2010/10/bardzo-proste-aktywne-obciazenie/
 category:
+  - elektronika
 tag:
 ---
 

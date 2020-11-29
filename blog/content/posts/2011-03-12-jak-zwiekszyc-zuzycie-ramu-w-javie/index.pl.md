@@ -5,6 +5,8 @@ aliases:
   - /index.php/2011/03/jak-zwiekszyc-zuzycie-ramu-w-javie/
   - /2011/03/jak-zwiekszyc-zuzycie-ramu-w-javie/
 category:
+  - programowanie
+  - java
 tag:
 ---
 

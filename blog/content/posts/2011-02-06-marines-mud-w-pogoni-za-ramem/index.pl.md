@@ -5,6 +5,7 @@ aliases:
   - /index.php/2011/02/marines-mud-w-pogoni-za-ramem/
   - /2011/02/marines-mud-w-pogoni-za-ramem/
 category:
+  - programowanie
 tag:
 ---
 

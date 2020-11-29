@@ -5,6 +5,8 @@ aliases:
   - /index.php/2011/05/java-lang-illegalstateexception-cannot-find-the-system-java-compiler-check-that-your-class-path-includes-tools-jar/
   - /2011/05/java-lang-illegalstateexception-cannot-find-the-system-java-compiler-check-that-your-class-path-includes-tools-jar/
 category:
+  - java
+  - programowanie
 tag:
 ---
 

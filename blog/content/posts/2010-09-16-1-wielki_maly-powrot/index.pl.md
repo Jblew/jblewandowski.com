@@ -5,6 +5,7 @@ aliases:
   - /index.php/2010/09/wielki_maly-powrot/
   - /2010/09/wielki_maly-powrot/
 category:
+ - fun
 tag:
 ---
 

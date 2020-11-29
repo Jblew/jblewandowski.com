@@ -5,6 +5,7 @@ aliases:
   - /index.php/2009/10/code-igniter-scaffolding-wielu-tabel-w-jednym-kontrolerze/
   - /2009/10/code-igniter-scaffolding-wielu-tabel-w-jednym-kontrolerze/
 category:
+  - programowanie
 tag:
 ---
 

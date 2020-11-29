@@ -5,6 +5,7 @@ aliases:
   - /index.php/2010/10/jak-latwiej-programowac-w-winavr-avr-gcc/
   - /2010/10/jak-latwiej-programowac-w-winavr-avr-gcc/
 category:
+  - elektronika
 tag:
 ---
 

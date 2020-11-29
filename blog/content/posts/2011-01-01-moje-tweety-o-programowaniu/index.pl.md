@@ -2,6 +2,7 @@
 title: Moje Tweety o programowaniu
 date: 2011-01-01T00:03:06+01:00
 category:
+  - inne
 tag:
 ---
 

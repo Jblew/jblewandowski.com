@@ -5,6 +5,7 @@ aliases:
   - /index.php/2010/10/muzyka-dla-informatyka/
   - /2010/10/muzyka-dla-informatyka/
 category:
+ - fun
 tag:
 ---
 

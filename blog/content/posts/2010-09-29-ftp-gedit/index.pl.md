@@ -5,6 +5,7 @@ aliases:
   - /index.php/2010/09/ftp-gedit/
   - /2010/09/ftp-gedit/
 category:
+  - programowanie
 tag:
 ---
 

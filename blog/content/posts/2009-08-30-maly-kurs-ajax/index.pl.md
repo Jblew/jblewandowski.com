@@ -5,6 +5,7 @@ aliases:
   - /index.php/2009/08/maly-kurs-ajax/
   - /2009/08/maly-kurs-ajax/
 category:
+  - programowanie
 tag:
 ---
 

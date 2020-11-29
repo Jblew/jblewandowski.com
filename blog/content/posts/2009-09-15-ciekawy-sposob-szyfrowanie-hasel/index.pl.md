@@ -5,6 +5,7 @@ aliases:
   - /index.php/2009/09/ciekawy-sposob-szyfrowanie-hasel/
   - /2009/09/ciekawy-sposob-szyfrowanie-hasel/
 category:
+- bezpieczenstwo
 tag:
 ---
 

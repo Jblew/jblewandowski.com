@@ -5,6 +5,7 @@ aliases:
   - /index.php/2010/09/arduino-czyli-poczatek-mojej-przygody-z-elektronika/
   - /2010/09/arduino-czyli-poczatek-mojej-przygody-z-elektronika/
 category:
+  - elektronika
 tag:
 ---
 

@@ -5,6 +5,7 @@ aliases:
   - /index.php/2011/02/dlaczego-debian-na-serwerze-jest-fajniejszy-niz-ubuntu/
   - /2011/02/dlaczego-debian-na-serwerze-jest-fajniejszy-niz-ubuntu/
 category:
+  - administracja
 tag:
 ---
 

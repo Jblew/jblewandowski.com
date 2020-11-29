@@ -6,6 +6,7 @@ aliases:
   - /2009/08/problemy-z-header-jak-im-zaradzic/
 category:
   - programowanie
+  - webmastering
 tag:
 ---
 

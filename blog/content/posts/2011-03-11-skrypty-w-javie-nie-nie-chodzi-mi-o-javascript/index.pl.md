@@ -6,6 +6,7 @@ aliases:
   - /2011/03/skrypty-w-javie-nie-nie-chodzi-mi-o-javascript/
 category:
  - java
+ - programowanie
 tag:
 ---
 

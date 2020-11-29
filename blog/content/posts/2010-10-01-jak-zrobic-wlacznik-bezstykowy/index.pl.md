@@ -5,6 +5,7 @@ aliases:
   - /index.php/2010/10/jak-zrobic-wlacznik-bezstykowy/
   - /2010/10/jak-zrobic-wlacznik-bezstykowy/
 category:
+  - elektronika
 tag:
 ---
 

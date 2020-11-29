@@ -5,6 +5,8 @@ aliases:
   - /index.php/2010/12/zabezpieczanie-ukladow-elektronicznych/
   - /2010/12/zabezpieczanie-ukladow-elektronicznych/
 category:
+  - elektronika
+  - bezpieczenstwo
 tag:
 ---
 

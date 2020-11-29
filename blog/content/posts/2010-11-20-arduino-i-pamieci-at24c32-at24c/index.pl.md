@@ -5,6 +5,7 @@ aliases:
   - /index.php/2010/11/arduino-i-pamieci-at24c32-at24c/
   - /2010/11/arduino-i-pamieci-at24c32-at24c/
 category:
+  - elektronika
 tag:
 ---
 

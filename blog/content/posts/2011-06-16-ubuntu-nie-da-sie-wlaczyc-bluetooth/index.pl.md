@@ -5,6 +5,7 @@ aliases:
   - /index.php/2011/06/ubuntu-nie-da-sie-waczyc-bluetooth/
   - /2011/06/ubuntu-nie-da-sie-waczyc-bluetooth/
 category:
+  - inne
 tag:
 ---
 

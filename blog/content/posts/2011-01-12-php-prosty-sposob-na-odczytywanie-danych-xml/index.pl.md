@@ -5,6 +5,8 @@ aliases:
   - /index.php/2011/01/php-prosty-sposob-na-odczytywanie-danych-xml/
   - /2011/01/php-prosty-sposob-na-odczytywanie-danych-xml/
 category:
+  - programowanie
+  - php
 tag:
 ---
 

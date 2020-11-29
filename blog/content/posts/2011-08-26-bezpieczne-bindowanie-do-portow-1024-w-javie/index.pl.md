@@ -6,6 +6,7 @@ aliases:
   - /2011/08/bezpieczne-bindowanie-do-portow-1024-w-javie/
 category:
  - java
+ - programowanie
 tag:
 ---
 

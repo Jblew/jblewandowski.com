@@ -5,6 +5,7 @@ aliases:
   - /index.php/2010/10/kamprog-dobry-programator-avr/
   - /2010/10/kamprog-dobry-programator-avr/
 category:
+  - elektronika
 tag:
 ---
 
