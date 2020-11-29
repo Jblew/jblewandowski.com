@@ -151,7 +151,7 @@ Jędrzej Lewandowski*
 ***
 ***
 
-> Tekst był opublikowany w kanale #polish
+> Tekst był opublikowany w kanale #pl-wise
 
 ## Komentarze — kopia komentarzy z blockchainu steem
 
