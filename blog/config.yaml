@@ -1,5 +1,5 @@
 baseURL: https://jedrzej.lewandowski.doctor/
-defaultContentLanguage: pl
+defaultContentLanguage: en
 theme: jblew-on-cupper-hugo-theme
 enableGitInfo: true
 
@@ -11,11 +11,11 @@ languages:
   pl:
     languageName: Polski
     title: Jędrzej Lewandowski (J-J) — programista i student medycyny
-    weight: 1
+    weight: 2
   en:
     languageName: English
     title: Jędrzej Lewandowski (J-J) — software developer and medical student
-    weight: 2
+    weight: 1
 
 permalinks:
   posts: /:year/:month/:title/
