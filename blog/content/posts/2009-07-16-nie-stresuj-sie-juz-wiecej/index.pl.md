@@ -4,9 +4,12 @@ date: 2009-07-16T00:03:06+01:00
 aliases:
   - /index.php/2009/07/nie-stresuj-sie-juz-wiecej/
   - /2009/07/nie-stresuj-sie-juz-wiecej/
-categories:
+category:
   - webmastering
+  - programowanie
 tags:
+ - Internet Explorer
+ - Java
 ---
 
 > **Archiwum (bardzo) młodego programisty.** Ten wpis pochodzi z mojego bloga, którego prowadziłem będąc uczniem Gimnazjum (obecnie są to klasy 6-8 szkoły podstawowej). Z sentymentu i rozczulenia postanowiłem przenieść te treści na moją nową stronę internetową. Na samym dole załączone są komentarze (jeśli jakieś były). [Tutaj przeczytasz o tym jak wyglądała moja pierwsza strona i przygoda z programowaniem]({{< ref "/posts/2020-11-27-wielki-programista-gimnazjalista" >}})

@@ -1,52 +1,79 @@
 ---
-title: 'Skrypty w javie…'
-date: 2011-03-11T00:00:00+01:00
+title: 'Bezpieczne bindowanie do portów < 1024 w javie'
+date: 2011-08-26T00:00:00+01:00
 aliases:
-  - /index.php/2011/03/skrypty-w-javie-nie-nie-chodzi-mi-o-javascript/
-  - /2011/03/skrypty-w-javie-nie-nie-chodzi-mi-o-javascript/
-categories:
-tags:
+  - /index.php/2011/08/bezpieczne-bindowanie-do-portow-1024-w-javie/
+  - /2011/08/bezpieczne-bindowanie-do-portow-1024-w-javie/
+category:
+ - java
+tag:
 ---
 
 > **Archiwum (bardzo) młodego programisty.** Ten wpis pochodzi z mojego bloga, którego prowadziłem będąc uczniem Gimnazjum (obecnie są to klasy 6-8 szkoły podstawowej). Z sentymentu i rozczulenia postanowiłem przenieść te treści na moją nową stronę internetową. Na samym dole załączone są komentarze (jeśli jakieś były). [Tutaj przeczytasz o tym jak wyglądała moja pierwsza strona i przygoda z programowaniem]({{< ref "/posts/2020-11-27-wielki-programista-gimnazjalista" >}})
 > 
 
-Jak już wcześniej pisałem już od pewnego czasu piszemy muda w czystej javie. Mamy już sporo funkcji i obsługę wieli mudowych problemów, w związku z czym nadszedł czas na rozpoczęcie tworzenia obsługi MOB-ów, czyli postaci sterowanych przez komputer. Każdy mob ma swój program, nazywany mobprogiem. Cały problem polega na tym, żeby móc edytować program moba bez ponownej kompilacji całego programu. Dość długo szukałem optymalnego rozwiązania. Zastanawiałem się m.in. nad dynamicznym kompilowaniem kodu, nad językiem lua…
 
-### Ale najlepsze okazało się dedykowane API dla skryptów – javax.script.
+W linuksach, żeby otworzyć gniazdo nasłuchujące na porcie od 0 do 1024, trzeba mieć prawa roota. Teoretycznie można uruchomić serwer z prawami roota, ale czy to bezpiecznie? Są aż dwa sposoby rozwiązania tego problemu, umożliwiające nasłuchiwanie na porcie 80, bez praw roota i bez rekompilacji jądra.
 
-Jest bardzo proste w obsłudze. Poniżej przedstawiamprzykład i opis:
+Pierwszy sposób to ustawienie przekierowania pakietów. Można do tego użyć programu **socat**. Najpierw musimy ustawić w aplikacji nasłuchiwanie na jakimś z „wyższych” portów, a następnie uruchomić program socat na koncie roota:
+
+```bash
+socat TCP-LISTEN:80,fork,su=nobody,reuseaddr TCP:127.0.0.1:8080 # przy takiej konfiguracji program socat przekieruje pakiety z portu 80, na port 8080.
+```
+
+Wadą sposobu z przekierowaniem jest to, że zużywamy w ten sposób więcej systemowych zasobów, a po drugie, nasza aplikacja nie może odczytać adresu ip osoby, która się połączyła z serwerem.
+
+## Lepszy sposób
+
+O wiele lepszym sposobem byłoby uruchomienie aplikacji z prawami roota, wykonanie wszystkich akcji wymagających uprawnień (np. otwarcie gniazda serwera na porcie 80) i utracenie przywilejów – przejście do trybu zwykłego użytkownika. Tylko jak to zrobić w javie? Z pomocą przychodzi nam biblioteka Apache Commons Daemon. Uruchamia ona naszą aplikację jako systemowy Daemon. Z prawami roota wywołuje funkcję init() naszego programu, a następnie traci prawa roota i wywołuje funkcję start(). Można ją pobrać tu. Biblioteka składa się z dwóch częsci. Jedna – to bilbioteka napisana w javie – musimy ją dołączyć do aplikacji, a druga, to narzędzie jsvc, które możemy pobrać z powyższej strony, a w niektórych systemach zainstalować z repozytorium: apt-get install jsvc.
+
+Na początek musimy zmodyfikować naszą aplikację. Tworzymy nową klasę, która będzie implementowała interfejs Daemon:
 
 ```java
-package scriptingtest;
+package myapp;
+import org.apache.commons.daemon.Daemon;
+import org.apache.commons.daemon.DaemonContext;
+import org.apache.commons.daemon.DaemonInitException;
+/**
+ *
+ * @author jblew
+ */
 
-import javax.script.ScriptEngine;
-import javax.script.ScriptEngineManager;
-import javax.script.ScriptException;
+public class Main implements Daemon {
 
-public class Main {
-  public static void main(String[] args) throws ScriptException {
-    ScriptEngineManager factory = new ScriptEngineManager();
-    ScriptEngine engine = factory.getEngineByName("JavaScript");
+    public void init(DaemonContext dc) throws DaemonInitException, Exception {
+        /**
+         * Ta funkcja jest uruchamiana pierwsza, z prawami roota. Tutaj należy otworzyć sockety na portach mniejszych niż 1024, np. 80.
+         */
+    }
 
-    Proba p = new Proba(); //zawiera tylko pole int i
+    public void start() throws Exception {
+        /**
+         * Ta metoda jest uruchamiana druga, po init(), ale już bez praw roota. Tutaj uruchamiamy aplikację.
+         */
+    }
+   
+    public void stop() throws Exception {
+        /**
+         * Tutaj zakańczamy aplikację.
+         */
+    }
 
-    engine.put("p", p);
-    p.i = 7;
-    System.out.println(p.i);
-
-    engine.eval(""
-      + "importPackage(java.lang);"
-      + "importClass(Packages.scriptingtest.Proba);"
-      + ""
-      + "p.i = 2;"
-    );
-
-
-    System.out.println(p.i);
-  }
+    public void destroy() {
+        /**
+         * A tu powinniśmy zniszczyć obiekty utworzone przez funkcję init().
+         */
+    }
 }
 ```
-Klasa Próba zawiera tylko pole `public int i = 0;` . Uruchamiając program zobaczymy, że skrypt zmieni wartość i z 7 na 2. To wszystko. Jak widać jest to bardzo proste i może być przydatne w dużych aplikacjach, szczególnie w grach.
 
-Należy tylko pamiętać, że **jeśli chcemy zaimportować jakąś klasę z wewnątrz jara**, w którym uruchamiamy program, musimy dodać na początku Packages.nazwapakietu.
+Ta klasa będzie odpowiedzialna za uruchamianie naszego programu. Teraz pozostała jeszcze tylko kwestia, jak to zrobić.
+Do uruchamiania tak spreparowanej aplikacji służy polecenie jsvc. Postaram się to wytłumaczyć na przykładzie:
+
+```bash
+sudo jsvc -user [nazwa użytkownika] -debug -cp MyApp.jar myapp.Main
+
+# To polecenie uruchomi opisane wyżej funkcje klasy myapp.Main, z pliku MyApp.jar. Dzięki parametrowi -debug zobaczymy wyjście apikacji i wszystkie błędy, jakie wystąpią. Koniecznie musimy dołączyć parametr -user, bo inaczej cała aplikacja będzie działała z prawami roota, a po dołączeniu tego parametru, dalsza część aplikacji przejdzie na konto użytkownika, którego podamy.
+```
+
+I to w zasadzie wszystko. Chciałbym jeszcze tylko pokazać, jak można restartować i wyłączać daemona, bo nie da się tego zrobić w standardowy sposób. Najłatwiej to zrobić z wewnątrz naszego programu. Zauważ, że funkcja init(DaemonContext dc) przyjmue jako parametr obiekt DaemonContext, który umożliwia pobranie kontrolera daemona (metodagetController()). Właśnie Kontroler Daemona (DaemonController) umożliwia wyłączenie aplikacji metodą shutdown() i restart – metodą reload(). Wystarczy więc zachować kontroler po uruchomieniu funkcji init() i w odpowiednim czasie wykonać funkcje wyłączające.

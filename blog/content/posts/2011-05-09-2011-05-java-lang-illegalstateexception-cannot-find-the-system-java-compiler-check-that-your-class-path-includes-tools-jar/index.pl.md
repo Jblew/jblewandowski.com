@@ -4,8 +4,8 @@ date: 2011-05-09T00:00:00+01:00
 aliases:
   - /index.php/2011/05/java-lang-illegalstateexception-cannot-find-the-system-java-compiler-check-that-your-class-path-includes-tools-jar/
   - /2011/05/java-lang-illegalstateexception-cannot-find-the-system-java-compiler-check-that-your-class-path-includes-tools-jar/
-categories:
-tags:
+category:
+tag:
 ---
 
 > **Archiwum (bardzo) młodego programisty.** Ten wpis pochodzi z mojego bloga, którego prowadziłem będąc uczniem Gimnazjum (obecnie są to klasy 6-8 szkoły podstawowej). Z sentymentu i rozczulenia postanowiłem przenieść te treści na moją nową stronę internetową. Na samym dole załączone są komentarze (jeśli jakieś były). [Tutaj przeczytasz o tym jak wyglądała moja pierwsza strona i przygoda z programowaniem]({{< ref "/posts/2020-11-27-wielki-programista-gimnazjalista" >}})

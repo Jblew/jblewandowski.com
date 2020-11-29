@@ -4,8 +4,9 @@ date: 2009-08-12T00:03:06+01:00
 aliases:
   - /index.php/2009/08/sledzenie-pakietow-w-windows/
   - /2009/08/sledzenie-pakietow-w-windows/
-categories:
-tags:
+category:
+ - inne
+tag:
 ---
 
 
