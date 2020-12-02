@@ -1,6 +1,6 @@
 ---
 title: Wielki programista, gimnazjalista [PL]
-date: 2020-07-16T00:03:06+01:00
+date: 2020-11-27T00:03:06+01:00
 categories:
   - polski
 ---
