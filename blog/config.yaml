@@ -11,10 +11,20 @@ languages:
   pl:
     languageName: Polski
     title: Jędrzej Lewandowski (J-J) — programista i student medycyny
+    header:
+      supertitle: Ciekawe przypadki
+      midtitle1: Jędrzeja
+      midtitle2: Lewandowskiego
+      subtitle: Programista, może będę lekarzem
     weight: 2
   en:
     languageName: English
     title: Jędrzej Lewandowski (J-J) — software developer and medical student
+    header:
+      supertitle: Curious case of
+      midtitle1: Jędrzej (J-J)
+      midtitle2: Lewandowski
+      subtitle: Programista, może będę lekarzem
     weight: 1
 
 permalinks:
