@@ -17,6 +17,11 @@ languages:
       midtitle2: Lewandowskiego
       subtitle: Programista, może będę lekarzem
     weight: 2
+    params:
+      footer: |
+        Copyright &copy; 2020-now by Jędrzej Lewandowski. <br />
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+        Made with [Hugo](https://gohugo.io/).
   en:
     languageName: English
     title: Jędrzej Lewandowski (J-J) — software developer and medical student
@@ -26,6 +31,11 @@ languages:
       midtitle2: Lewandowski
       subtitle: Programista, może będę lekarzem
     weight: 1
+    params:
+      footer: |
+        Copyright &copy; 2020-now by Jędrzej Lewandowski. <br />
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencja Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br />Ten utwór jest dostępny na <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">licencji Creative Commons Uznanie autorstwa-Na tych samych warunkach 4.0 Międzynarodowe</a>.
+        Made with [Hugo](https://gohugo.io/).
 
 permalinks:
   posts: /:year/:month/:title/
@@ -36,15 +46,9 @@ imaging:
 params:
   description: Blog of Jędrzej (pronounce J-J) Lewandowski. Doctor, software developer and behaviorist.
   homeMetaContent: Blog of Jędrzej (pronounce J-J) Lewandowski. Doctor, software developer and behaviorist.
-  footer: Made with [Hugo](https://gohugo.io/). Themed by [Cupper](https://github.com/zwbetz-gh/cupper-hugo-theme).
   # For more date formats see https://gohugo.io/functions/format/
   dateFormat: Jan 2, 2006
-  katex: false
-  hideHeaderLinks: false
-  search: false
-  customCss:
-    - css/style.css
-  customJs:
+  mobileMediaBreakpoint: 768px
 
 menu:
   nav:
