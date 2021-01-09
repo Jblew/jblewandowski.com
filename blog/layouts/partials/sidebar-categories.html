@@ -1,0 +1,10 @@
+<h3>{{ i18n "categories" }}</h3>
+<ul>
+    {{ range .Site.Menus.categories }}
+        <li>
+            <a href="{{ .URL }}" title="{{ .Title }}">
+            {{ .Title }}
+            </a>
+        </li>
+    {{ end }}
+</ul>

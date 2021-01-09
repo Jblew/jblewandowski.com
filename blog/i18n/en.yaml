@@ -1,0 +1,4 @@
+- id: categories
+  translation: Categories
+- id: sorry_not_found_title
+  translation: "Sorry, I really cannot find the thing you were looking for"

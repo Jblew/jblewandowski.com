@@ -51,22 +51,46 @@ params:
   mobileMediaBreakpoint: 768px
 
 menu:
-  nav:
-    - name: Blog
-      url: /
-      weight: 1
-    - name: CV
-      url: /cv/
-      weight: 2
-    - name: Tags
-      url: /tags/
-      weight: 3
-    - name: About
-      url: /about/
-      weight: 4
-    - name: RSS
-      url: /index.xml
-      weight: 5
+  categories:
+    - identifier: bezpieczenstwo
+      title: "Bezpieczeństwo (PL)"
+      url: /pl/category/bezpieczenstwo
+    - identifier: administracja
+      title: Administracja (PL)
+      url: /pl/category/administracja
+    - identifier: elektronika
+      title: Elektronika (PL)
+      url: /pl/category/elektronika
+    - identifier: fun
+      title: Fun (PL)
+      url: /pl/category/fun
+    - identifier: inne
+      title: Inne (PL)
+      url: /pl/category/inne
+    - identifier: java
+      title: Java (PL)
+      url: /pl/category/java
+    - identifier: programowanie
+      title: Programowanie (PL)
+      url: /pl/category/programowanie
+    - identifier: webmastering
+      title: Webmastering (PL)
+      url: /pl/category/webmastering
+    - identifier: blockchain
+      title: Blockchain (PL)
+      url: /pl/category/blockchain
+    - identifier: katolicyzm
+      title: Katolicyzm (PL)
+      url: /pl/category/katolicyzm
+    - identifier: polski
+      title: Polski (PL)
+      url: /pl/category/polski
+    - identifier: technologia
+      title: Technologia (PL)
+      url: /pl/category/technologia
+    
+    
+    
 
 markup:
   defaultMarkdownHandler: goldmark
