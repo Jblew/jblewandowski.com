@@ -16,6 +16,7 @@ languages:
       midtitle1: Jędrzeja
       midtitle2: Lewandowskiego
       subtitle: Programista, może będę lekarzem
+      link: /pl
     weight: 2
     params:
       footer: |
@@ -30,6 +31,7 @@ languages:
       midtitle1: Jędrzej (J-J)
       midtitle2: Lewandowski
       subtitle: MDoctorist, programmist & behaviourist
+      link: /en
     weight: 1
     params:
       footer: |
