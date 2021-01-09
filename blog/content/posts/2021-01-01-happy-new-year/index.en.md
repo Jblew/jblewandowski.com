@@ -6,3 +6,7 @@ category:
 ---
 
 May the 2021 be even better than the 2020!
+
+<!--more-->
+
+Some more content
