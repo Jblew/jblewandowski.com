@@ -7,6 +7,7 @@ taxonomies:
   category: category
   tag: tags
 
+
 languages:
   pl:
     languageName: Polski
@@ -17,6 +18,8 @@ languages:
       midtitle2: Lewandowskiego
       subtitle: Programista, może będę lekarzem
       link: /pl
+    profilePhoto: /img/jedrzej-lewandowski-600.jpg
+    profileText: 'Cześć, jestem Jędrzej. Student 6 roku medycyny, programista senior fullstack (typescript / vue / node / golang). Ten blog jest moją kroniką.'
     weight: 2
     params:
       footer: |
@@ -32,6 +35,8 @@ languages:
       midtitle2: Lewandowski
       subtitle: MDoctorist, programmist & behaviourist
       link: /en
+    profilePhoto: /img/jedrzej-lewandowski-600.jpg
+    profileText: 'Hi, I’m Jędrzej. 6th year medical student, fullstack software developer and behavioural design passionate. This blog is a chronicle of my activity.'
     weight: 1
     params:
       footer: |
