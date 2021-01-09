@@ -46,6 +46,7 @@ languages:
 
 permalinks:
   posts: /:year/:month/:title/
+  archiveyearly: /:year/
 
 imaging:
   quality: 99
@@ -95,8 +96,6 @@ menu:
     - identifier: technologia
       title: Technologia (PL)
       url: /pl/category/technologia
-    
-    
     
 
 markup:

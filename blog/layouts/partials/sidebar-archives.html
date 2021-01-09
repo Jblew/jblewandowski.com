@@ -1,0 +1,9 @@
+<h3>{{ i18n "archives" }}</h3>
+<ul class="years">
+    {{ range where .Site.Pages "Section" "archiveyearly" }}
+    {{ $year := .Date.Format "2006" }}
+    <li>
+        <a href="{{ .Permalink }}">{{ $year }}</a>
+    </li>
+    {{ end }}
+</ul>
