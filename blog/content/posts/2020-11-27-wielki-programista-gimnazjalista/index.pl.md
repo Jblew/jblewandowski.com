@@ -5,8 +5,9 @@ categories:
   - polski
 ---
 
-> Czyli o tym kiedy zacząłem programować i jak wyglądał mój "blog o programowaniu" w gimnazjum
+Czyli o tym kiedy zacząłem programować i jak wyglądał mój "blog o programowaniu" w gimnazjum
 
+<!--more-->
 ### Strona internetowa szkoły podstawowej — początki
 
 TODO

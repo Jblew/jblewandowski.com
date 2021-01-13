@@ -1,0 +1,14 @@
+<ul class="main-menu">
+    {{ range .Site.Params.menuMain }}
+    <li>
+        <a href="{{ .url }}" title="{{ .title }}">
+            {{ .title }}
+        </a>
+    </li>
+    {{ end }}
+</ul>
+<style>
+    .main-menu {
+        text-align: center;
+    }
+</style>

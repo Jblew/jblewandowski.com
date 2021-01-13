@@ -39,6 +39,16 @@ languages:
         10: października
         11: listopada
         12: grudnia
+      menuMain:
+        - identifier: blog
+          title: "Blog"
+          url: "/"
+        - identifier: cv
+          title: "CV"
+          url: "/cv"
+        - identifier: contact
+          title: "Kontakt"
+          url: "/contact"
 
   en:
     languageName: English
@@ -71,6 +81,16 @@ languages:
         10: october
         11: november
         12: december
+      menuMain:
+        - identifier: blog
+          title: "Blog"
+          url: "/"
+        - identifier: cv
+          title: "CV"
+          url: "/cv"
+        - identifier: contact
+          title: "Contakt"
+          url: "/contact"
 
 permalinks:
   posts: /:year/:month/:title/
