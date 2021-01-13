@@ -1,0 +1,10 @@
+{{ with .Resources }}
+    {{ with .GetMatch "{cover.*,*.jpg,*.png,*.jpeg}" }}
+        {{ if eq .ResourceType "image" }}
+            {{ $cover := .Fit "800x800" }}
+            {{ with $cover }}
+                <img src="{{ .Permalink }}" alt="{{ .Title }}" />
+            {{ end }}
+        {{ end }}
+    {{ end }}
+{{ end }}
