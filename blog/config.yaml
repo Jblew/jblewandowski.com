@@ -1,16 +1,41 @@
 baseURL: https://jedrzej.lewandowski.doctor/
 defaultContentLanguage: en
-theme: jblew-on-cupper-hugo-theme
+theme: jblew.pl-on-papermod
 enableGitInfo: true
+enableRobotsTXT: true
+# googleAnalytics: UA-...
+
+minify:
+  disableXML: true
+  minifyOutput: true
 
 taxonomies:
   category: category
   tag: tags
 
+params:
+  env: production
+  description: Blog of Jędrzej (pronounce J-J) Lewandowski. Doctor, software developer and behaviorist.
+  homeMetaContent: Blog of Jędrzej (pronounce J-J) Lewandowski. Doctor, software developer and behaviorist.
+  socialIcons: # optional
+    - name: github
+      url: "https://github.com/Jblew"
+    - name: RSS
+      url: "index.xml"
+  # For more date formats see https://gohugo.io/functions/format/
+  dateFormat: Jan 2, 2006
+  mobileMediaBreakpoint: 768px
+
 languages:
   pl:
     languageName: Polski
-    title: Jędrzej Lewandowski (J-J) — programista i student medycyny
+    title: Jędrzej Lewandowski
+    homeInfoParams:
+      Title: Jędrzej B. Lewandowski
+      Content: |
+        Cześć, jestem Jędrzej. Z powołania jestem programistą, ale z zamiłowania 
+        kończę trening do bycia lekarzem (w czerwcu). To są moje kroniki. Twórczość od 2009 do teraz.
+        Chcesz wiedzieć więcej? => [CV Jędrzeja](/cv). Zapraszam [do kontaktu](/pl/contact) 
     header:
       supertitle: Ciekawe przypadki
       midtitle1: Jędrzeja
@@ -52,7 +77,13 @@ languages:
 
   en:
     languageName: English
-    title: Jędrzej Lewandowski (J-J) — software developer and medical student
+    title: JB Lewandowski (J-J)
+    homeInfoParams:
+      Title: JB Lewandowski
+      Content: |
+        Hi, I'm Jędrzej (pronounced J-J). My calling is software development, but I'm also a hobbyst med student,
+        finishing the training in June. Here I present my entire chronicles to you. From 2009 till now.
+        Want to know more? => [CV of J-J](/cv). Any [contact](/contact) is welcome
     header:
       supertitle: Curious case of
       midtitle1: Jędrzej (J-J)
@@ -98,13 +129,6 @@ permalinks:
 
 imaging:
   quality: 99
-
-params:
-  description: Blog of Jędrzej (pronounce J-J) Lewandowski. Doctor, software developer and behaviorist.
-  homeMetaContent: Blog of Jędrzej (pronounce J-J) Lewandowski. Doctor, software developer and behaviorist.
-  # For more date formats see https://gohugo.io/functions/format/
-  dateFormat: Jan 2, 2006
-  mobileMediaBreakpoint: 768px
 
 menu:
   categories:

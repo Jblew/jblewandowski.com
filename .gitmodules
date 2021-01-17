@@ -1,3 +1,6 @@
 [submodule "blog/themes/jblew-on-cupper-hugo-theme"]
 	path = blog/themes/jblew-on-cupper-hugo-theme
 	url = git@github.com:Jblew/jblew-on-cupper-hugo-theme.git
+[submodule "blog/themes/jblew.pl-on-papermod"]
+	path = blog/themes/jblew.pl-on-papermod
+	url = git@github.com:Jblew/jblew.pl-on-papermod.git
