@@ -25,8 +25,11 @@ params:
   socialIcons: # optional
     - name: github
       url: "https://github.com/Jblew"
-    - name: RSS
-      url: "index.xml"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/j%C4%99drzej-lewandowski/"
+    - name: 
+      text: CodersRank
+      url: "https://profile.codersrank.io/user/jblew"
   # For more date formats see https://gohugo.io/functions/format/
   dateFormat: Jan 2, 2006
 
