@@ -5,6 +5,9 @@ enableGitInfo: true
 enableRobotsTXT: true
 # googleAnalytics: UA-...
 
+staticDir:
+  - static
+
 minify:
   disableXML: true
   minifyOutput: true
@@ -17,6 +20,7 @@ params:
   env: production
   description: Blog of Jędrzej (pronounce J-J) Lewandowski. Doctor, software developer and behaviorist.
   homeMetaContent: Blog of Jędrzej (pronounce J-J) Lewandowski. Doctor, software developer and behaviorist.
+  displayFullLangName: true
   socialIcons: # optional
     - name: github
       url: "https://github.com/Jblew"
@@ -29,13 +33,27 @@ params:
 languages:
   pl:
     languageName: Polski
+    LanguageName: 🇵🇱 Polski
     title: Jędrzej Lewandowski
     homeInfoParams:
       Title: Jędrzej B. Lewandowski
+      Image:
+        Alt: Jędrzej Bogumił Lewandowski
+        Src: "/img/jedrzej-lewandowski-600.jpg"
       Content: |
         Cześć, jestem Jędrzej. Z powołania jestem programistą, ale z zamiłowania 
         kończę trening do bycia lekarzem (w czerwcu). To są moje kroniki. Twórczość od 2009 do teraz.
         Chcesz wiedzieć więcej? => [CV Jędrzeja](/cv). Zapraszam [do kontaktu](/pl/contact) 
+    menu:
+      main:
+        - name: 'Blog'
+          url: '/pl/'
+        - name: 'Kontakt'
+          url: '/pl/contact'
+        - name: 'CV'
+          url: '/cv'
+        - name: 'Archiwum'
+          url: '/pl/archives'
     header:
       supertitle: Ciekawe przypadki
       midtitle1: Jędrzeja
@@ -77,13 +95,27 @@ languages:
 
   en:
     languageName: English
+    LanguageName: 🇬🇧 English
     title: JB Lewandowski (J-J)
     homeInfoParams:
       Title: JB Lewandowski
+      Image:
+        Alt: Jędrzej Bogumił Lewandowski
+        Src: "/img/jedrzej-lewandowski-600.jpg"
       Content: |
         Hi, I'm Jędrzej (pronounced J-J). My calling is software development, but I'm also a hobbyst med student,
         finishing the training in June. Here I present my entire chronicles to you. From 2009 till now.
         Want to know more? => [CV of J-J](/cv). Any [contact](/contact) is welcome
+    menu:
+      main:
+        - name: 'Blog'
+          url: '/'
+        - name: 'Contact'
+          url: '/contact'
+        - name: 'CV'
+          url: '/cv'
+        - name: 'Archives'
+          url: '/archives'
     header:
       supertitle: Curious case of
       midtitle1: Jędrzej (J-J)
