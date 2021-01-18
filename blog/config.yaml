@@ -18,6 +18,7 @@ taxonomies:
 
 params:
   env: production
+  defaultTheme: auto
   description: Blog of Jędrzej (pronounce J-J) Lewandowski. Doctor, software developer and behaviorist.
   homeMetaContent: Blog of Jędrzej (pronounce J-J) Lewandowski. Doctor, software developer and behaviorist.
   displayFullLangName: true
@@ -28,7 +29,6 @@ params:
       url: "index.xml"
   # For more date formats see https://gohugo.io/functions/format/
   dateFormat: Jan 2, 2006
-  mobileMediaBreakpoint: 768px
 
 languages:
   pl:
