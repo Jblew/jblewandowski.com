@@ -6,6 +6,10 @@ category:
   - technologia
   - polski
 tag:
+cover:
+    image: "cave4.jpg"
+    alt: "Athanasius Kircher. Schodzenie do jaskini z \"Mundus Subterraneus\". 1678. Vilnius University Library. Credit: Google arts and culture. Koloryzowane"
+    caption: "Athanasius Kircher. Schodzenie do jaskini z \"Mundus Subterraneus\". 1678. Vilnius University Library. Credit: Google arts and culture. Koloryzowane"
 ---
 
 > Ten artykuł napisałem dla e-czasopisma katolickiego Siejmy. [Link do całego numeru, mój artykuł na końcu](https://siejmy.pl/2020/05/siejmy-kwiecien-maj-2020/)

@@ -8,6 +8,10 @@ category:
   - wise
   - polski
 tag:
+cover:
+    image: "intro-img-2.png"
+    alt: "Wise intro"
+    caption: "Wise intro"
 ---
 
 > W latach 2018-2019 pracowałem w startupie blockchainowym jako Architekt aplikacji wspomagającej delegowanie voting power na platformie Steem.

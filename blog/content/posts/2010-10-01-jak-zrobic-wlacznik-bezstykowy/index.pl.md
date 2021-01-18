@@ -1,6 +1,6 @@
 ---
 title: Jak zrobić włącznik bezstykowy [PL]
-date: 2010-09-29T00:00:00+01:00
+date: 2010-10-01T00:00:00+01:00
 aliases:
   - /index.php/2010/10/jak-zrobic-wlacznik-bezstykowy/
   - /2010/10/jak-zrobic-wlacznik-bezstykowy/
@@ -8,6 +8,10 @@ category:
   - elektronika
   - polski
 tag:
+cover:
+  image: "20101001.jpg"
+  alt: "Najprostszy czujnik pojemnościowy"
+  caption: "Najprostszy czujnik pojemnościowy"
 ---
 
 > **Archiwum (bardzo) młodego programisty.** Ten wpis pochodzi z mojego bloga, którego prowadziłem będąc uczniem Gimnazjum (obecnie są to klasy 6-8 szkoły podstawowej). Z sentymentu i rozczulenia postanowiłem przenieść te treści na moją nową stronę internetową. Na samym dole załączone są komentarze (jeśli jakieś były). [Tutaj przeczytasz o tym jak wyglądała moja pierwsza strona i przygoda z programowaniem]({{< ref "/posts/2020-11-27-wielki-programista-gimnazjalista" >}})

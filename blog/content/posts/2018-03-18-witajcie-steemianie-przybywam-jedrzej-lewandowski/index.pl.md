@@ -7,6 +7,10 @@ category:
  - blockchain
  - polski
 tag:
+cover:
+    image: "laryngo.jpg"
+    alt: "Pozdrowienia z Laryngologii"
+    caption: "Pozdrowienia z Laryngologii"
 ---
 
 > W latach 2018-2019 pracowałem w startupie blockchainowym jako Architekt aplikacji wspomagającej delegowanie voting power na platformie Steem.

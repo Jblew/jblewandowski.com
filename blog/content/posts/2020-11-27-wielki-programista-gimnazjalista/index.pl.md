@@ -3,6 +3,10 @@ title: Wielki programista, gimnazjalista [PL]
 date: 2020-11-27T00:03:06+01:00
 categories:
   - polski
+cover:
+    image: "jblew.pl-notatki-strona.png"
+    alt: "Tak wyglądała strona internetowa, kiedy przestałem pisać"
+    caption: "Tak wyglądała strona internetowa, kiedy przestałem pisać"
 ---
 
 Czyli o tym kiedy zacząłem programować i jak wyglądał mój "blog o programowaniu" w gimnazjum

@@ -6,6 +6,10 @@ category:
   - technologia
   - polski
 tag:
+cover:
+    image: "lamb-takes-book.png"
+    alt: "Nieznany Autor. Baranek bierze zapieczętowaną Książeczkę, Aniołowie i Starcy śpiewają Pieść Chwału. Ok 1255-1260"
+    caption: "Nieznany Autor. Baranek bierze zapieczętowaną Książeczkę, Aniołowie i Starcy śpiewają Pieść Chwału. Ok 1255-1260"
 ---
 
 > Ten artykuł napisałem dla e-czasopisma katolickiego Siejmy. [Link do całego numeru, mój artykuł na końcu](https://siejmy.pl/2020/10/siejmy-6-2020/)

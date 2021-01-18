@@ -6,6 +6,10 @@ category:
   - technologia
   - polski
 tag:
+cover:
+    image: "anthroposcopy2.png"
+    alt: "Andreas Otto. Strona tytułowa książki \"Antroposkopia. Czyli spojrzenie człowieka na osobę\". 1647"
+    caption: "Andreas Otto. Strona tytułowa książki \"Antroposkopia. Czyli spojrzenie człowieka na osobę\". 1647"
 ---
 
 > Ten artykuł napisałem dla e-czasopisma katolickiego Siejmy. [Link do całego numeru, mój artykuł na końcu](https://siejmy.pl/2020/07/siejmy-3-2020/)

@@ -8,6 +8,10 @@ category:
   - wise
   - polski
 tag:
+cover:
+    image: "bugarticle.jpg"
+    alt: "Wise, blockchain a przyroda"
+    caption: "Wise, blockchain a przyroda"
 ---
 
 
