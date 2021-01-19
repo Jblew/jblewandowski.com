@@ -12,6 +12,8 @@ cover:
   image: "20101001.jpg"
   alt: "Najprostszy czujnik pojemnościowy"
   caption: "Najprostszy czujnik pojemnościowy"
+summary: |
+  Zastanawiałeś się kiedyś jak działają bezdotykowe czujniki, które reagują na przyłożenie ręki? Chciałbyś taki czujnik zbudować? Jest to niezwykle proste, a potrzebne części kosztują grosze! Nie musisz kupować kosztownych przełączników pojemnościowych. Zrób to sam!
 ---
 
 > **Archiwum (bardzo) młodego programisty.** Ten wpis pochodzi z mojego bloga, którego prowadziłem będąc uczniem Gimnazjum (obecnie są to klasy 6-8 szkoły podstawowej). Z sentymentu i rozczulenia postanowiłem przenieść te treści na moją nową stronę internetową. Na samym dole załączone są komentarze (jeśli jakieś były). [Tutaj przeczytasz o tym jak wyglądała moja pierwsza strona i przygoda z programowaniem]({{< ref "/posts/2020-11-27-wielki-programista-gimnazjalista" >}})

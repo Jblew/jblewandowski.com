@@ -12,6 +12,9 @@ cover:
   image: "gedit.png"
   alt: "Gedit FTP"
   caption: "Gedit FTP"
+summary: |
+  Czy ktoś z was nie zastanawiał się, jak można rozbudować prostego gedita?
+  Też mnie to trapiło, i wiele szukałem. Także sporo znalazłem. Pierwszym dodatkiem, który znalazłem był Gedit Ftp Browser.
 ---
 
 > **Archiwum (bardzo) młodego programisty.** Ten wpis pochodzi z mojego bloga, którego prowadziłem będąc uczniem Gimnazjum (obecnie są to klasy 6-8 szkoły podstawowej). Z sentymentu i rozczulenia postanowiłem przenieść te treści na moją nową stronę internetową. Na samym dole załączone są komentarze (jeśli jakieś były). [Tutaj przeczytasz o tym jak wyglądała moja pierwsza strona i przygoda z programowaniem]({{< ref "/posts/2020-11-27-wielki-programista-gimnazjalista" >}})

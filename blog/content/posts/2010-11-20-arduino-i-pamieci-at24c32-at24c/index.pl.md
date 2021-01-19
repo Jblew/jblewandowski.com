@@ -12,6 +12,11 @@ cover:
   image: "at24cp.jpg"
   alt: "Pamięć AT24CP — podłączenie"
   caption: "Pamięć AT24CP — podłączenie"
+summary: |
+  Ostatnimi dni wygrzebałem z elektronicznych rupieci stary tuner tv satelitarnej. Po bliższych oględzinach w oko wpadła mi pamięć AT24C32. Komunikujemy z nią odbywa się za pośrednictwem szyny I2C. Jest to dość wy﻿godny sposób, ponieważ do szyny możemy podłączyć wiele urządzeń jednocześnie, a poza tym standard ten jest bardzo popularny i wykorzystuje go większość dzisiejszych mikrokontrolerów.
+
+  Postanowiłem opisać podłączenie tego układu do płytki arduino.
+
 ---
 
 > **Archiwum (bardzo) młodego programisty.** Ten wpis pochodzi z mojego bloga, którego prowadziłem będąc uczniem Gimnazjum (obecnie są to klasy 6-8 szkoły podstawowej). Z sentymentu i rozczulenia postanowiłem przenieść te treści na moją nową stronę internetową. Na samym dole załączone są komentarze (jeśli jakieś były). [Tutaj przeczytasz o tym jak wyglądała moja pierwsza strona i przygoda z programowaniem]({{< ref "/posts/2020-11-27-wielki-programista-gimnazjalista" >}})

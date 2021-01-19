@@ -7,6 +7,8 @@ aliases:
 category:
   - programowanie
 tag:
+summary: |
+  Od dwóch tygodni piszemy z Progtrykiem MUD-a. MUD był jego pomysłem, ale postanowiłem przyłączyć się do projektu. MUD nazywa się Marines. Akcja toczy się w roku 2063, zaraz po III Wojnie Światowej. Ponieważ III Wojna Światowa rozciągała się niemiłosiernie długo, i istniała realna groźba zniszczenia przez ludzi naszej błękitnej planety, ktoś w jakiś sposób zniszczył wszystkie nowoczesne bronie i sprawił, że ludzie zapomnieli dla kogo walczą. W jednej chwili przestały istnieć państwa i hierarchia. Zapanował totalny chaos i anarchia. W grze, każdy walczy sam, przeciwko innym graczom. Na domiar złego, natura wybrała akurat ten moment, aby przemagnesować bieguny, w rezultacie czego, zmieniły się kontynenty i ziemia wygląda zupełnie inaczej. No, to tyle o historii. Potem ją dopracujemy i wrzucimy na stronę muda (marines.jblew.pl).
 ---
 
 > **Archiwum (bardzo) młodego programisty.** Ten wpis pochodzi z mojego bloga, którego prowadziłem będąc uczniem Gimnazjum (obecnie są to klasy 6-8 szkoły podstawowej). Z sentymentu i rozczulenia postanowiłem przenieść te treści na moją nową stronę internetową. Na samym dole załączone są komentarze (jeśli jakieś były). [Tutaj przeczytasz o tym jak wyglądała moja pierwsza strona i przygoda z programowaniem]({{< ref "/posts/2020-11-27-wielki-programista-gimnazjalista" >}})

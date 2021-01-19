@@ -8,6 +8,8 @@ category:
   - elektronika
   - polski
 tag:
+summary: |
+  Od pewnego czasu próbowałem programować mikrokontrolery avr na moim laptopie (vista, linux). Niestety nie mam lpt, a programator usbAsp nie działał w żadnej wersji i konfiguracji. Zdesperowany postanowiłem zakupić gotowy programator. Wybór padł na KamProg firmy kamami i muszę przyznać, że zaczął działać prawie od razu.
 ---
 
 > **Archiwum (bardzo) młodego programisty.** Ten wpis pochodzi z mojego bloga, którego prowadziłem będąc uczniem Gimnazjum (obecnie są to klasy 6-8 szkoły podstawowej). Z sentymentu i rozczulenia postanowiłem przenieść te treści na moją nową stronę internetową. Na samym dole załączone są komentarze (jeśli jakieś były). [Tutaj przeczytasz o tym jak wyglądała moja pierwsza strona i przygoda z programowaniem]({{< ref "/posts/2020-11-27-wielki-programista-gimnazjalista" >}})

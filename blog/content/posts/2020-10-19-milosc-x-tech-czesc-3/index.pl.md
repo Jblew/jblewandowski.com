@@ -12,15 +12,15 @@ cover:
     caption: "Nieznany Autor. Baranek bierze zapieczętowaną Książeczkę, Aniołowie i Starcy śpiewają Pieść Chwału. Ok 1255-1260"
 ---
 
-> Ten artykuł napisałem dla e-czasopisma katolickiego Siejmy. [Link do całego numeru, mój artykuł na końcu](https://siejmy.pl/2020/10/siejmy-6-2020/)
+Nadchodzą czasy, kiedy ewangelia będzie głoszona po całej ziemii, a Miłość będzie fundamentem naszej kultury. Weźmiesz udział w przygotowaniach?
+
+<br />
+*Ten artykuł napisałem dla e-czasopisma katolickiego Siejmy. [Link do całego numeru, mój artykuł na końcu](https://siejmy.pl/2020/10/siejmy-6-2020/)*
+<!--more-->
 
 > To jest trzecia część artykułu: [Pierwsza część]({{< ref "/posts/2020-04-25-milosc-x-tech-czesc-1" >}}) [Druga część]({{< ref "2020-07-03-milosc-x-tech-czesc-2" >}})
 
-![lamb-takes-book](lamb-takes-book.png)
 
-Nieznany Autor. Baranek bierze zapieczętowaną Książeczkę, Aniołowie i Starcy śpiewają Pieść Chwału. Ok 1255-1260
-
-Nadchodzą czasy, kiedy ewangelia będzie głoszona po całej ziemii, a Miłość będzie fundamentem naszej kultury. Weźmiesz udział w przygotowaniach?
 
 
 ## Apokalipsa

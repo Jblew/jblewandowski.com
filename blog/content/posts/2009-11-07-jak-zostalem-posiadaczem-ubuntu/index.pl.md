@@ -8,6 +8,8 @@ category:
   - fun
   - polski
 tag:
+summary: |
+  Nie ma co ukrywać: przed instalacją systemu dużo czytałem, bo bałem się, że coś pójdzie nie tak i stracę dane. W końcu zebrałem się w sobie i nagrałem GParted i Ubuntu na płytkę. Następnie uruchomiłem GParted i zabrałem się do partycjonowania. Na początku sprawiło mi to trochę kłopotu i o mały włos nie sformatowałem partycji windowsa, ale w końcu jakoś się udało i podzieliłem partycje w następujący sposób
 ---
 
 > **Archiwum (bardzo) młodego programisty.** Ten wpis pochodzi z mojego bloga, którego prowadziłem będąc uczniem Gimnazjum (obecnie są to klasy 6-8 szkoły podstawowej). Z sentymentu i rozczulenia postanowiłem przenieść te treści na moją nową stronę internetową. Na samym dole załączone są komentarze (jeśli jakieś były). [Tutaj przeczytasz o tym jak wyglądała moja pierwsza strona i przygoda z programowaniem]({{< ref "/posts/2020-11-27-wielki-programista-gimnazjalista" >}})

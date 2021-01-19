@@ -11,6 +11,8 @@ category:
 tags:
  - Internet Explorer
  - Java
+summary: |
+  Często spotykamy się z sytyuacją gdy użytkownicy naszej strony używają starszej wersji przeglądarki niż my, jest to spory problem szczególnie z Internet Explorerem, który w starszych wersjach jest naprawdę nieprzewidywalny. Aby sprawdzić stronę w starszych wersjach IE na pewno nie polecam instalowania ich. Najlepiej zainstalować specjalny program, jak np. IETester, którego gorąco polecam do takich zastosowań.
 ---
 
 > **Archiwum (bardzo) młodego programisty.** Ten wpis pochodzi z mojego bloga, którego prowadziłem będąc uczniem Gimnazjum (obecnie są to klasy 6-8 szkoły podstawowej). Z sentymentu i rozczulenia postanowiłem przenieść te treści na moją nową stronę internetową. Na samym dole załączone są komentarze (jeśli jakieś były). [Tutaj przeczytasz o tym jak wyglądała moja pierwsza strona i przygoda z programowaniem]({{< ref "/posts/2020-11-27-wielki-programista-gimnazjalista" >}})

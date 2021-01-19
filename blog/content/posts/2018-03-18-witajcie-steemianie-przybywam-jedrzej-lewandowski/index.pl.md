@@ -11,6 +11,8 @@ cover:
     image: "laryngo.jpg"
     alt: "Pozdrowienia z Laryngologii"
     caption: "Pozdrowienia z Laryngologii"
+summary: |
+  W latach 2018-2019 pracowałem w startupie blockchainowym **Wise** jako Architekt aplikacji wspomagającej delegowanie voting power na platformie Steem. To jest mój wpis-intro na platformie Steem, na której byłem aktywny w związku z pracą w Wise. Na przełomie 2019/20 źli ludzie próbowali przejąć Steem, więc obecnie prawidłowa nazwa tej platformy to Hive.io.
 ---
 
 > W latach 2018-2019 pracowałem w startupie blockchainowym jako Architekt aplikacji wspomagającej delegowanie voting power na platformie Steem.

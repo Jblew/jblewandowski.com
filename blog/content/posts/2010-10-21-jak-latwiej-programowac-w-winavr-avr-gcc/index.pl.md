@@ -8,6 +8,9 @@ category:
   - elektronika
   - polski
 tag:
+summary: |
+  Sam dopiero zaczynam przygodę z programowaniem mikrokontrolerów i wiem, co się z tym wiąże. Nie jest łatwo zacząć. Najtrudniej jest, gdy ktoś w ogóle nie programował wcześniej, albo programował w języku wysokiego poziomu (Java, basic, etc.). Prawdę mówiąc kod programów pisanych w C dla avr wcale nie jest czytelny. Jeśli ktoś nie siedzi w tym dostatecznie długo, to nie jest w stanie spamiętać wszystkich rejestrów, a operacje bitowe tylko pogarszają sprawę. Nieczytelność kodu doskonale obrazuje poniższy przykład. (Jest to prosty program, który zmienia stan diody po przerwaniu INT0.
+  Napisałem biblioteczkę ułatwiającą pracę z avr-C. Niestety po latach kod zaginął.
 ---
 
 > **Archiwum (bardzo) młodego programisty.** Ten wpis pochodzi z mojego bloga, którego prowadziłem będąc uczniem Gimnazjum (obecnie są to klasy 6-8 szkoły podstawowej). Z sentymentu i rozczulenia postanowiłem przenieść te treści na moją nową stronę internetową. Na samym dole załączone są komentarze (jeśli jakieś były). [Tutaj przeczytasz o tym jak wyglądała moja pierwsza strona i przygoda z programowaniem]({{< ref "/posts/2020-11-27-wielki-programista-gimnazjalista" >}})

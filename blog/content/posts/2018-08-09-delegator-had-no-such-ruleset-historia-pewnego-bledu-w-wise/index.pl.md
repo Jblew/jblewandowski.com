@@ -12,6 +12,11 @@ cover:
     image: "bugarticle.jpg"
     alt: "Wise, blockchain a przyroda"
     caption: "Wise, blockchain a przyroda"
+summary: |
+  Nic tak nie denerwuje jak błąd, który uniemożliwia korzystanie z ulubionego programu. Szczególnie, jeżeli nic z nim nie możemy zrobić. Zwykle błędy są trywialne i udaje się je rozwiązać w ciągu kilku godzin. W przypadku tego błędu było jednak inaczej.
+  
+  <br />
+  "Delegator had no such ruleset", opisany w https://github.com/noisy-witness/steem-wise-cli/issues/9 od początku stwarzał nam kłopoty. Problem występował niestale. Można by rzec — z rzadka. Pojawiał się raz na kilkadziesiąd voteorderów. Został zgłoszony przez @noisy 29 czerwca. Nie wydawał się wtedy dużym kłopotem, jako że nie występował często.
 ---
 
 

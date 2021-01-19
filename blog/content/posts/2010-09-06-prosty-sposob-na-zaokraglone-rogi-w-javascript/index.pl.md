@@ -8,6 +8,8 @@ category:
   - programowanie
   - polski
 tag:
+summary: |
+  Ostatnio przeglądałem internet w poszukiwaniu prostego sposobu na zaokrąglone rogi w javascript bez żadnych obrazków, i znalazłem [jQuery corner](http://jquery.malsup.com/corner/). Jest to prosty plugin do jQuery który pozwala nam tworzyć dowolne rogi dowolnych elementów! Obsługa jest naprawdę prosta
 ---
 
 > **Archiwum (bardzo) młodego programisty.** Ten wpis pochodzi z mojego bloga, którego prowadziłem będąc uczniem Gimnazjum (obecnie są to klasy 6-8 szkoły podstawowej). Z sentymentu i rozczulenia postanowiłem przenieść te treści na moją nową stronę internetową. Na samym dole załączone są komentarze (jeśli jakieś były). [Tutaj przeczytasz o tym jak wyglądała moja pierwsza strona i przygoda z programowaniem]({{< ref "/posts/2020-11-27-wielki-programista-gimnazjalista" >}})

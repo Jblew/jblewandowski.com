@@ -8,6 +8,8 @@ category:
   - programowanie
   - polski
 tag:
+summary: |
+  AJAX to technologia umożliwiająca nam dynamiczne ładowaie danych z serwera na naszą stronę bez odświeżania całej strony. Jest to kożystne pod względem wydajności gdyż przesyłane jest tylko to co ma się zmienić, natomiast statyczne elementy naszej strony, tak jak logo, czy tło nie muszą być ponownie pobierane z serwera, następną korzyścią jest to, że poczas przesyłania danych w technologii AJAX strona jest cały czas dostępna dla użytkownika i reaguje na polecenia. Nazwa AJAX to skrót od Asynchronous-Javascript-And-XML, czeli asynchroniczny Javascript i XML.
 ---
 
 > **Archiwum (bardzo) młodego programisty.** Ten wpis pochodzi z mojego bloga, którego prowadziłem będąc uczniem Gimnazjum (obecnie są to klasy 6-8 szkoły podstawowej). Z sentymentu i rozczulenia postanowiłem przenieść te treści na moją nową stronę internetową. Na samym dole załączone są komentarze (jeśli jakieś były). [Tutaj przeczytasz o tym jak wyglądała moja pierwsza strona i przygoda z programowaniem]({{< ref "/posts/2020-11-27-wielki-programista-gimnazjalista" >}})

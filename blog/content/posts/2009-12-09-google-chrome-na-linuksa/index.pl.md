@@ -12,6 +12,8 @@ cover:
   image: "chrome_os.png"
   alt: "Google Chrome na linuksie 2009"
   caption: "Google Chrome na linuksie 2009"
+summary: |
+  Tak. Stało się to, na co czekało wielu użytkowników linuksa – Google wydało wersję przeglądarki Chrome przeznaczoną na linuksa.
 ---
 
 > **Archiwum (bardzo) młodego programisty.** Ten wpis pochodzi z mojego bloga, którego prowadziłem będąc uczniem Gimnazjum (obecnie są to klasy 6-8 szkoły podstawowej). Z sentymentu i rozczulenia postanowiłem przenieść te treści na moją nową stronę internetową. Na samym dole załączone są komentarze (jeśli jakieś były). [Tutaj przeczytasz o tym jak wyglądała moja pierwsza strona i przygoda z programowaniem]({{< ref "/posts/2020-11-27-wielki-programista-gimnazjalista" >}})

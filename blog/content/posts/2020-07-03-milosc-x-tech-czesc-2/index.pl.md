@@ -12,15 +12,14 @@ cover:
     caption: "Andreas Otto. Strona tytułowa książki \"Antroposkopia. Czyli spojrzenie człowieka na osobę\". 1647"
 ---
 
-> Ten artykuł napisałem dla e-czasopisma katolickiego Siejmy. [Link do całego numeru, mój artykuł na końcu](https://siejmy.pl/2020/07/siejmy-3-2020/)
+Opisuję ogromny przeskok, jaki dokonał się na przełomie lat 70. Przeskok w myśleniu. Epokowe przejście od świata zorientowanego na ludzi do świata zorientowanego na osoby. Różnica między pojęciami wydaje się niewielka. Różnica między światem ludzi i światem osób jest kolosalna. 
+
+<br />
+*Ten artykuł napisałem dla e-czasopisma katolickiego Siejmy. [Link do całego numeru, mój artykuł na końcu](https://siejmy.pl/2020/07/siejmy-3-2020/)*
+
+<!--more-->
 
 > To jest druga część artykułu. [Link do pierwszej części]({{< ref "/posts/2020-04-25-milosc-x-tech-czesc-1" >}})
-
-![anthroposcopy](anthroposcopy2.png)
-
-> Andreas Otto. Strona tytułowa książki "Antroposkopia. Czyli spojrzenie człowieka na osobę". 1647
-
-# MIŁOŚĆxTECH, część druga
 
 ## Nowa epoka. Epoka Osób.
 

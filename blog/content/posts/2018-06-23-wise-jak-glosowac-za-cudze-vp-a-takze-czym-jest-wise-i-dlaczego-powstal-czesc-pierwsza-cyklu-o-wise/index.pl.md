@@ -12,6 +12,8 @@ cover:
     image: "intro-img-2.png"
     alt: "Wise intro"
     caption: "Wise intro"
+summary: |
+  Steem WISE to system delegacji głosów wymyślony przez @noisy, nad którym miałem przyjemność pracować. Chcę się podzielić swoimi spostrzeżeniami i przedstawić prostą instrukcję głosowania za pomocą WISE. W następnych częściach przedstawię instrukcję dla delegatorów, instrukcję pisania reguł, instrukcję developerską dla chcących korzystać z biblioteki, oraz guideline dla tych, którzy chcą włączyć się w projekt.
 ---
 
 > W latach 2018-2019 pracowałem w startupie blockchainowym jako Architekt aplikacji wspomagającej delegowanie voting power na platformie Steem.
@@ -24,9 +26,6 @@ cover:
 > Ze względu na niestabilną sytuację i niepewną przyszłość Steem oraz Hive — zdecydowałem sie na przeniesienie treści z blockchainu na własną stronę internetową.
 
 > Oryginalny post tu: https://hive.blog/polish/@jblew/wise-jak-glosowac-za-cudze-vp-a-takze-czym-jest-wise-i-dlaczego-powstal-czesc-pierwsza-cyklu-o-wise
-
-
-![Wise intro](intro-img-2.png)
 
 Steem WISE to system delegacji głosów wymyślony przez @noisy, nad którym miałem przyjemność pracować. Chcę się podzielić swoimi spostrzeżeniami i przedstawić prostą instrukcję głosowania za pomocą WISE. W następnych częściach przedstawię instrukcję dla delegatorów, instrukcję pisania reguł, instrukcję developerską dla chcących korzystać z biblioteki, oraz guideline dla tych, którzy chcą włączyć się w projekt.
 

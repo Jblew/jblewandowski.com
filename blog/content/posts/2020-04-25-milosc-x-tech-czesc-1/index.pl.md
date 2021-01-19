@@ -12,28 +12,25 @@ cover:
     caption: "Athanasius Kircher. Schodzenie do jaskini z \"Mundus Subterraneus\". 1678. Vilnius University Library. Credit: Google arts and culture. Koloryzowane"
 ---
 
-> Ten artykuł napisałem dla e-czasopisma katolickiego Siejmy. [Link do całego numeru, mój artykuł na końcu](https://siejmy.pl/2020/05/siejmy-kwiecien-maj-2020/)
+*"Czy Jezus mógł mieć rację?"*, *"Nowe rynki warte miliardy dolarów — eksperci nie mają wątpliwości"*. *"Dolina Krzemowa na tropie filozofii Jezusa Chrystusa"*. 
 
-![cave4](cave4.jpg)
+<br />
+Nagłówki, których dotychczas nie napisał nikt. A powinien. Rewolucja "love driven design" przybiera na sile. Wystarczy postępować według Pisma Świętego. 
 
-Athanasius Kircher. Schodzenie do jaskini z "Mundus Subterraneus". 1678. Vilnius University Library. Credit: Google arts and culture. Koloryzowane
+<br />
+Jestem trochę zły. Dlaczego my chrześcijanie, znając te nauki od ponad 2000 lat, nie zarobiliśmy tych miliardów? Jak wiele dobra moglibyśmy dzięki nim uczynić?
 
-# MIŁOŚĆ x TECH
+<br />
+Zanim przejdziemy do tematu pieniędzy czy miłości, przemyślmy te 2000 lat, które minęły od zamiany Sprawiedliwości na Miłosierdzie Boże. Bądź cierpliwy czytelniku. Słowo Jezusa zaczekało 1970 lat, żeby zasiać  to ziarno, o którym Ci opowiem. Pozwól więc, że ja też nadwyrężę Twoją cierpliwość.
+
+<!--more-->
+
+*Ten artykuł napisałem dla e-czasopisma katolickiego Siejmy. [Link do całego numeru, mój artykuł na końcu](https://siejmy.pl/2020/05/siejmy-kwiecien-maj-2020/)*
 
 > *Gdy zaś przyjdzie to, co jest doskonałe,*
 > *zniknie to, co jest tylko częściowe* 
 >
 > ​						— Hymn o Miłości, werset 10
-
-## love driven design
-
-*"Czy Jezus mógł mieć rację?"*, *"Nowe rynki warte miliardy dolarów — eksperci nie mają wątpliwości"*. *"Dolina Krzemowa na tropie filozofii Jezusa Chrystusa"*. 
-
-Nagłówki, których dotychczas nie napisał nikt. A powinien. Rewolucja "love driven design" przybiera na sile. Wystarczy postępować według Pisma Świętego. 
-
-Jestem trochę zły. Dlaczego my chrześcijanie, znając te nauki od ponad 2000 lat, nie zarobiliśmy tych miliardów? Jak wiele dobra moglibyśmy dzięki nim uczynić?
-
-Zanim przejdziemy do tematu pieniędzy czy miłości, przemyślmy te 2000 lat, które minęły od zamiany Sprawiedliwości na Miłosierdzie Boże. Bądź cierpliwy czytelniku. Słowo Jezusa zaczekało 1970 lat, żeby zasiać  to ziarno, o którym Ci opowiem. Pozwól więc, że ja też nadwyrężę Twoją cierpliwość.
 
 ## Część 1 — przegapiliśmy nową epokę historyczną. Przegapimy następną
 

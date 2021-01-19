@@ -9,15 +9,12 @@ cover:
   image: "tweety-na-jblewpl.png"
   alt: "Tweety na jblew.pl"
   caption: "Tweety na jblew.pl"
+summary: |
+  Archiwum Tweetów, które były wyświetlane na blogu jblew.pl w roku 2011
 ---
 
 > **Archiwum (bardzo) młodego programisty.** Ten wpis pochodzi z mojego bloga, którego prowadziłem będąc uczniem Gimnazjum (obecnie są to klasy 6-8 szkoły podstawowej). Z sentymentu i rozczulenia postanowiłem przenieść te treści na moją nową stronę internetową. Na samym dole załączone są komentarze (jeśli jakieś były). [Tutaj przeczytasz o tym jak wyglądała moja pierwsza strona i przygoda z programowaniem]({{< ref "/posts/2020-11-27-wielki-programista-gimnazjalista" >}})
 > 
-
-> W moim blogu wyświetlałem również swoje Tweety, pomiędzy wpisami, wygladało to tak:
->
-> ![Tweety na jblew.pl](tweety-na-jblewpl.png)
-
 
 
 Tutaj zamieszczam ich listę:

@@ -8,6 +8,8 @@ category:
   - inne
   - polski
 tag:
+summary: |
+  Śledzenie drogi, jaką pakiety danych przebywają od serwera, do naszego komputera nie jest potrzebne, ale może być ciekawe. Postaram się po krótce pokazać, jak sprawdzić drogę pakietów.
 ---
 
 

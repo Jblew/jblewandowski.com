@@ -9,6 +9,8 @@ category:
   - php
   - polski
 tag:
+summary: |
+  Jak zapewne zauważyliście dodałem na bloga skrypt wyświetlający wpisy z twittera między wpisami z bloga. Zanim jednak można będzie wyświetlić dane, trzeba je najpierw pobrać z serwera. Najłatwiejszym sposobem na pobranie wpisów twittera jest odczytanie kanału rss danego użytkownika.
 ---
 
 > **Archiwum (bardzo) młodego programisty.** Ten wpis pochodzi z mojego bloga, którego prowadziłem będąc uczniem Gimnazjum (obecnie są to klasy 6-8 szkoły podstawowej). Z sentymentu i rozczulenia postanowiłem przenieść te treści na moją nową stronę internetową. Na samym dole załączone są komentarze (jeśli jakieś były). [Tutaj przeczytasz o tym jak wyglądała moja pierwsza strona i przygoda z programowaniem]({{< ref "/posts/2020-11-27-wielki-programista-gimnazjalista" >}})

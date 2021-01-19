@@ -7,6 +7,12 @@ aliases:
 category:
   - polski
 tag:
+summary: |
+  Zauważyłem, że bardzo powszechne jest stwierdzenie, iż o bezpieczeństwie haseł decyduje ich długość, natomiast całkowicie zapomina się w tym momencie o algorytmie, który tworzy skrót. Na bardzo wielu stronach tworzenie skrótu wygląda tak: md5($hash). Funkcja jest bardzo prosta, wykonuje się szybko…
+  No właśnie, wykonuje się szybko… Działa to bardzo na korzyść hakera, który najczęściej, aby poznać hasło, szyfruje (takim samym algorytmem) po kolei miliony ciągów znaków i porównuje z hashem wykradzionym z naszej bazy danych.
+  
+  <br />
+  Disclaimer: oczywiście z perspektywy czasu zdaję sobie sprawę, że byłem w błędzie.
 ---
 
 > **Archiwum (bardzo) młodego programisty.** Ten wpis pochodzi z mojego bloga, którego prowadziłem będąc uczniem Gimnazjum (obecnie są to klasy 6-8 szkoły podstawowej). Z sentymentu i rozczulenia postanowiłem przenieść te treści na moją nową stronę internetową. Na samym dole załączone są komentarze (jeśli jakieś były). [Tutaj przeczytasz o tym jak wyglądała moja pierwsza strona i przygoda z programowaniem]({{< ref "/posts/2020-11-27-wielki-programista-gimnazjalista" >}})

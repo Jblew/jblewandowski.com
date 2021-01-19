@@ -13,6 +13,8 @@ cover:
   image: "IMG_7837.jpg"
   alt: "Zabezpieczenia układów"
   caption: "Zabezpieczenia układów"
+summary: |
+  Fajnie jest konstruować różne urządzenia, przeprowadzać eksperymenty… Musimy jednak pamiętać o bezpieczeństwie. O bezpieczeństwie konstruktora, użytkowników, a także samego układu elektronicznego. Co to byłoby za urządzenie, które psułoby się od najzwyklejszej pomyłki, jaką jest odwrotne podłączenie baterii. Postaram się po krótce pokazać kilka sposobów na zapewnienie prawdłowej pracy i bezpieczeństwa naszym układom.
 ---
 
 > **Archiwum (bardzo) młodego programisty.** Ten wpis pochodzi z mojego bloga, którego prowadziłem będąc uczniem Gimnazjum (obecnie są to klasy 6-8 szkoły podstawowej). Z sentymentu i rozczulenia postanowiłem przenieść te treści na moją nową stronę internetową. Na samym dole załączone są komentarze (jeśli jakieś były). [Tutaj przeczytasz o tym jak wyglądała moja pierwsza strona i przygoda z programowaniem]({{< ref "/posts/2020-11-27-wielki-programista-gimnazjalista" >}})
