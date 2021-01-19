@@ -3,6 +3,7 @@ title: Arduino, czyli początek mojej przygody z elektroniką [PL]
 date: 2010-09-16T01:00:00+01:00
 aliases:
   - /index.php/2010/09/arduino-czyli-poczatek-mojej-przygody-z-elektronika/
+  - /index.php/2010/09/arduino-czyli-poczatek-mojej-przygody-z-elektronika/comment-page-1/
   - /2010/09/arduino-czyli-poczatek-mojej-przygody-z-elektronika/
 category:
   - elektronika
