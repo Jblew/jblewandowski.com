@@ -7,8 +7,7 @@
         "firebase.json",
         "**/.*",
         "**/node_modules/**"
-      ],
-      "predeploy": "blog/build.sh"
+      ]
     }
   ]
 }
