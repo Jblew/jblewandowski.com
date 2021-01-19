@@ -59,20 +59,19 @@ languages:
       main:
         - name: 'Blog'
           url: '/pl/'
+          weight: 2
         - name: 'Kontakt'
           url: '/pl/contact'
-        - name: 'CV'
-          url: '/cv'
+          weight: 5
+        - name: 'CV	⧉'
+          url: 'https://jedrzej.lewandowski.doctor/'
+          weight: 1
         - name: 'Archiwum'
           url: '/pl/archives'
+          weight: 3
         - name: 'Kategorie'
           url: '/pl/category'
-    header:
-      supertitle: Ciekawe przypadki
-      midtitle1: Jędrzeja
-      midtitle2: Lewandowskiego
-      subtitle: Programista, może będę lekarzem
-      link: /pl
+          weight: 4
     profilePhoto: /img/jedrzej-lewandowski-600.jpg
     profileText: 'Cześć, jestem Jędrzej. Student 6 roku medycyny, programista senior fullstack (typescript / vue / node / golang). Ten blog jest moją kroniką.'
     weight: 2
@@ -100,26 +99,24 @@ languages:
     menu:
       main:
         - name: 'Blog'
+          weight: 2
           url: '/'
         - name: 'Contact'
           url: '/contact'
-        - name: 'CV'
-          url: '/cv'
+          weight: 5
+        - name: 'CV ⧉'
+          weight: 1
+          url: 'https://jedrzej.lewandowski.doctor/'
         - name: 'Archives'
+          weight: 3
           url: '/archives'
         - name: 'Categories'
+          weight: 4
           url: '/category'
-    header:
-      supertitle: Curious case of
-      midtitle1: Jędrzej (J-J)
-      midtitle2: Lewandowski
-      subtitle: MDoctorist, programmist & behaviourist
-      link: /en
     author: JB Lewandowski
     profilePhoto: /img/jedrzej-lewandowski-600.jpg
     profileText: 'Hi, I’m Jędrzej. 6th year medical student, fullstack software developer and behavioural design passionate. This blog is a chronicle of my activity.'
     weight: 1
-    params:
     copyright: |
         Copyright &copy; 2009-now by Jędrzej Lewandowski. 
         <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
