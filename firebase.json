@@ -3,7 +3,11 @@
     {
       "target": "jblew-pl",
       "public": "blog/public",
-      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
       "predeploy": "blog/build.sh"
     }
   ]
