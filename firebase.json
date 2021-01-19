@@ -1,11 +1,16 @@
 {
-  "hosting": {
-    "public": "dist",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
-    "predeploy": "build.sh"
-  }
+  "hosting": [
+    {
+      "target": "jblew-pl",
+      "public": "blog/public",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "predeploy": "blog/build.sh"
+    },
+    {
+      "target": "jedrzej-lewandowski-doctor",
+      "public": "cv",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "predeploy": "cv/build.sh"
+    }
+  ]
 }

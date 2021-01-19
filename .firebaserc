@@ -1,5 +1,17 @@
 {
   "projects": {
     "default": "jedrzej-lewandowski-doctor"
+  },
+  "targets": {
+    "jedrzej-lewandowski-doctor": {
+      "hosting": {
+        "jblew-pl": [
+          "jblew-pl"
+        ],
+        "jedrzej-lewandowski-doctor": [
+          "jedrzej-lewandowski-doctor"
+        ]
+      }
+    }
   }
 }
