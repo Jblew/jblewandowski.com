@@ -10,6 +10,7 @@ category:
 tag:
 cover:
     image: "bugarticle.jpg"
+    relative: true
     alt: "Wise, blockchain a przyroda"
     caption: "Wise, blockchain a przyroda"
 summary: |

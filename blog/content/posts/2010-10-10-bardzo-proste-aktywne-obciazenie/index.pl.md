@@ -10,6 +10,7 @@ category:
 tag:
 cover:
   image: "schemat-obciazenie.png"
+  relative: true
   alt: "Schemat aktywnego obciążenia na LM317"
   caption: "Schemat aktywnego obciążenia na LM317"
 summary: |

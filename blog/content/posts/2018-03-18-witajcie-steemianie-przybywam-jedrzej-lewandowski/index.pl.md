@@ -9,6 +9,7 @@ category:
 tag:
 cover:
     image: "laryngo.jpg"
+    relative: true
     alt: "Pozdrowienia z Laryngologii"
     caption: "Pozdrowienia z Laryngologii"
 summary: |

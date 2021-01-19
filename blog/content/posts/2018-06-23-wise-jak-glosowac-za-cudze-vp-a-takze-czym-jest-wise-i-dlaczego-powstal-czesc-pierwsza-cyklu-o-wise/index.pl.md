@@ -10,6 +10,7 @@ category:
 tag:
 cover:
     image: "intro-img-2.png"
+    relative: true
     alt: "Wise intro"
     caption: "Wise intro"
 summary: |

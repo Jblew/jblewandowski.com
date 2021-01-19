@@ -5,6 +5,7 @@ category:
   - inne
 cover:
     image: "infomeet.jpg"
+    relative: true
     alt: "Jędrzej's lecture on Infomeet"
     caption: "How to unleash the power of Typescript in your project"
 ---

@@ -10,6 +10,7 @@ category:
 tag:
 cover:
   image: "at24cp.jpg"
+  relative: true
   alt: "Pamięć AT24CP — podłączenie"
   caption: "Pamięć AT24CP — podłączenie"
 summary: |

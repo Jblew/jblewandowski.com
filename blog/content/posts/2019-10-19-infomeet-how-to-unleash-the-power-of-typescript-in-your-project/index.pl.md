@@ -5,6 +5,7 @@ category:
   - inne
 cover:
     image: "infomeet.jpg"
+    relative: true
     alt: "Wykład Jędrzeja na Infomeet"
     caption: "Wykład Jędrzeja na Infomeet"
 ---

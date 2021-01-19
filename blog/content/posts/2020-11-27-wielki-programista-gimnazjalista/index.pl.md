@@ -5,6 +5,7 @@ categories:
   - polski
 cover:
     image: "jblew.pl-notatki-strona.png"
+    relative: true
     alt: "Tak wyglądała strona internetowa, kiedy przestałem pisać"
     caption: "Tak wyglądała strona internetowa, kiedy przestałem pisać"
 ---

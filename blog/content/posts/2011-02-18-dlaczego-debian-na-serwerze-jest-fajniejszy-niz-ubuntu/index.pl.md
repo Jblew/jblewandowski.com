@@ -10,6 +10,7 @@ category:
 tag:
 cover:
     image: "debian-vs-ubuntu.png"
+    relative: true
     alt: "Debian vs ubuntu RAM na serwerze"
     caption: "Debian vs ubuntu RAM na serwerze"
 ---

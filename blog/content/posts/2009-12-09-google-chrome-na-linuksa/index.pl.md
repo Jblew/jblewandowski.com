@@ -10,6 +10,7 @@ category:
 tag:
 cover:
   image: "chrome_os.png"
+  relative: true
   alt: "Google Chrome na linuksie 2009"
   caption: "Google Chrome na linuksie 2009"
 summary: |

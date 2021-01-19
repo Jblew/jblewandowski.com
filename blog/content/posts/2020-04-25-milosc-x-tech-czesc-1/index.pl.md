@@ -8,6 +8,7 @@ category:
 tag:
 cover:
     image: "cave4.jpg"
+    relative: true
     alt: "Athanasius Kircher. Schodzenie do jaskini z \"Mundus Subterraneus\". 1678. Vilnius University Library. Credit: Google arts and culture. Koloryzowane"
     caption: "Athanasius Kircher. Schodzenie do jaskini z \"Mundus Subterraneus\". 1678. Vilnius University Library. Credit: Google arts and culture. Koloryzowane"
 ---

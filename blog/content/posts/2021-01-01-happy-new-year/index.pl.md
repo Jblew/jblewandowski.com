@@ -5,6 +5,7 @@ category:
   - inne
 cover:
     image: "cover.jpg"
+    relative: true
     alt: "Szczęśliwego Nowego Roku wszystkim!"
     caption: "Szczęśliwego Nowego Roku wszystkim!"
 ---

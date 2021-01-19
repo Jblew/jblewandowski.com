@@ -10,6 +10,7 @@ category:
 tag:
 cover:
   image: "gedit.png"
+  relative: true
   alt: "Gedit FTP"
   caption: "Gedit FTP"
 summary: |

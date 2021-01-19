@@ -7,6 +7,7 @@ category:
 tag:
 cover:
   image: "tweety-na-jblewpl.png"
+  relative: true
   alt: "Tweety na jblew.pl"
   caption: "Tweety na jblew.pl"
 summary: |

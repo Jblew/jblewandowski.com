@@ -10,6 +10,7 @@ category:
 tag:
 cover:
   image: "20101001.jpg"
+  relative: true
   alt: "Najprostszy czujnik pojemnościowy"
   caption: "Najprostszy czujnik pojemnościowy"
 summary: |

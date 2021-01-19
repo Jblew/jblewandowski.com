@@ -8,6 +8,7 @@ category:
 tag:
 cover:
     image: "lamb-takes-book.png"
+    relative: true
     alt: "Nieznany Autor. Baranek bierze zapieczętowaną Książeczkę, Aniołowie i Starcy śpiewają Pieść Chwału. Ok 1255-1260"
     caption: "Nieznany Autor. Baranek bierze zapieczętowaną Książeczkę, Aniołowie i Starcy śpiewają Pieść Chwału. Ok 1255-1260"
 ---

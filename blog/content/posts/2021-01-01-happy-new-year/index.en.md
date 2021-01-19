@@ -5,6 +5,7 @@ category:
   - inne
 cover:
     image: "cover.jpg"
+    relative: true
     alt: "Happy new year to all!"
     caption: "Happy new year to all!"
 ---

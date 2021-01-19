@@ -8,6 +8,7 @@ category:
 tag:
 cover:
     image: "anthroposcopy2.png"
+    relative: true
     alt: "Andreas Otto. Strona tytułowa książki \"Antroposkopia. Czyli spojrzenie człowieka na osobę\". 1647"
     caption: "Andreas Otto. Strona tytułowa książki \"Antroposkopia. Czyli spojrzenie człowieka na osobę\". 1647"
 ---

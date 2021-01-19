@@ -11,6 +11,7 @@ category:
 tag:
 cover:
   image: "IMG_7837.jpg"
+  relative: true
   alt: "Zabezpieczenia układów"
   caption: "Zabezpieczenia układów"
 summary: |
