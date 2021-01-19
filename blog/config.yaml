@@ -69,24 +69,12 @@ languages:
     profileText: 'Cześć, jestem Jędrzej. Student 6 roku medycyny, programista senior fullstack (typescript / vue / node / golang). Ten blog jest moją kroniką.'
     weight: 2
     author: Jędrzej B. Lewandowski
-    params:
-      footer: |
-        Copyright &copy; 2020-now by Jędrzej Lewandowski. <br />
-        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
-        Made with [Hugo](https://gohugo.io/).
-      monthNames:
-        1: stycznia
-        2: lutego
-        3: marca
-        4: kwietnia
-        5: maja
-        6: czerwca
-        7: lipca
-        8: sierpnia
-        9: września
-        10: października
-        11: listopada
-        12: grudnia
+    copyright: |
+        Copyright &copy; 2009-now by Jędrzej Lewandowski.
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+        <img alt="Creative Commons License" style="border-width:0;display:inline-block;" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />
+        </a>
+        This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
 
   en:
     languageName: English
@@ -124,23 +112,12 @@ languages:
     profileText: 'Hi, I’m Jędrzej. 6th year medical student, fullstack software developer and behavioural design passionate. This blog is a chronicle of my activity.'
     weight: 1
     params:
-      footer: |
-        Copyright &copy; 2020-now by Jędrzej Lewandowski. <br />
-        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencja Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br />Ten utwór jest dostępny na <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">licencji Creative Commons Uznanie autorstwa-Na tych samych warunkach 4.0 Międzynarodowe</a>.
-        Made with [Hugo](https://gohugo.io/).
-      monthNames:
-        1: january
-        2: february
-        3: march
-        4: april
-        5: may
-        6: june
-        7: july
-        8: august
-        9: september
-        10: october
-        11: november
-        12: december
+    copyright: |
+        Copyright &copy; 2009-now by Jędrzej Lewandowski. 
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+        <img alt="Licencja Creative Commons" style="border-width:0;display:inline-block;" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" />
+        </a>
+        Ten utwór jest dostępny na <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">licencji Creative Commons Uznanie autorstwa-Na tych samych warunkach 4.0 Międzynarodowe</a>.
 
 permalinks:
   posts: /:year/:month/:title/
