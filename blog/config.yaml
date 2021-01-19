@@ -22,6 +22,7 @@ params:
   description: Blog of Jędrzej (pronounce J-J) Lewandowski. Doctor, software developer and behaviorist.
   homeMetaContent: Blog of Jędrzej (pronounce J-J) Lewandowski. Doctor, software developer and behaviorist.
   displayFullLangName: true
+  ShowReadingTime: true
   socialIcons: # optional
     - name: github
       url: "https://github.com/Jblew"
