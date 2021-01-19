@@ -4,6 +4,7 @@ title: "Archives"
 
 - [Archive 2021](/2021/)
 - [Archive 2020](/2020/)
+- [Archive 2019](/2019/)
 - [Archive 2018](/2018/)
 - [Archive 2011](/2011/)
 - [Archive 2010](/2010/)
