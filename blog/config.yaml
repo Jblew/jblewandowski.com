@@ -1,4 +1,4 @@
-baseURL: https://jedrzej.lewandowski.doctor/
+baseURL: https://jblew.pl/
 defaultContentLanguage: en
 theme: jblew.pl-on-papermod
 enableGitInfo: true
@@ -31,6 +31,8 @@ params:
     - name: 
       text: CodersRank
       url: "https://profile.codersrank.io/user/jblew"
+  images:
+    - "/img/jedrzej-lewandowski-600.jpg"
   # For more date formats see https://gohugo.io/functions/format/
   dateFormat: Jan 2, 2006
 
