@@ -1,4 +1,4 @@
-baseURL: https://jblew.pl/
+baseURL: https://jblewandowski.com/
 defaultContentLanguage: en
 theme: jblew.pl-on-papermod
 enableGitInfo: true
@@ -26,7 +26,7 @@ params:
   socialIcons: # optional
     - name: 
       text: CV
-      url: "https://cv.jblew.pl"
+      url: "https://cv.jblewandowski.pl"
     - name: github
       url: "https://github.com/Jblew"
     - name: linkedin
@@ -57,7 +57,7 @@ languages:
       Content: |
         Cześć, jestem Jędrzej. Z powołania jestem programistą, ale z zamiłowania 
         kończę trening do bycia lekarzem (w czerwcu). To są moje kroniki. Twórczość od 2009 do teraz. Jestem dumny z bycia katolikiem.
-        Chcesz wiedzieć więcej? => [CV Jędrzeja](https://cv.jblew.pl/). Zapraszam do [kontaktu](/pl/contact) 
+        Chcesz wiedzieć więcej? => [CV Jędrzeja](https://cv.jblewandowski.pl/). Zapraszam do [kontaktu](/pl/contact) 
     menu:
       main:
         - name: 'Blog'
@@ -67,7 +67,7 @@ languages:
           url: '/pl/contact'
           weight: 5
         - name: 'CV	⧉'
-          url: 'https://cv.jblew.pl/'
+          url: 'https://cv.jblewandowski.pl/'
           weight: 1
         - name: 'Archiwum'
           url: '/pl/archives'
@@ -98,7 +98,7 @@ languages:
       Content: |
         Hi, I'm Jędrzej (pronounced J-J). My calling is software development, but I'm also a hobbyst med student,
         finishing the training in June. Here I present my entire chronicles to you. From 2009 till now. I'm proud to be a Catholic.
-        Want to know more? => [CV of J-J](https://cv.jblew.pl/). Any [contact](/contact) is welcome
+        Want to know more? => [CV of J-J](https://cv.jblewandowski.pl/). Any [contact](/contact) is welcome
     menu:
       main:
         - name: 'Blog'
@@ -109,7 +109,7 @@ languages:
           weight: 5
         - name: 'CV ⧉'
           weight: 1
-          url: 'https://cv.jblew.pl/'
+          url: 'https://cv.jblewandowski.pl/'
         - name: 'Archives'
           weight: 3
           url: '/archives'
