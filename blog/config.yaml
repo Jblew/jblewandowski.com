@@ -19,8 +19,8 @@ taxonomies:
 params:
   env: production
   defaultTheme: auto
-  description: Blog of Jędrzej (pronounce J-J) Lewandowski. Doctor, software developer and behaviorist.
-  homeMetaContent: Blog of Jędrzej (pronounce J-J) Lewandowski. Doctor, software developer and behaviorist.
+  description: Blog of Jędrzej (pronounce J-J) Lewandowski. Medical doctor, software developer and behaviorist.
+  homeMetaContent: Blog of Jędrzej (pronounce J-J) Lewandowski. Medical doctor, software developer and behaviorist.
   displayFullLangName: true
   ShowReadingTime: true
   socialIcons: # optional
@@ -55,8 +55,7 @@ languages:
         Alt: Jędrzej Bogumił Lewandowski
         Src: "/img/jedrzej-lewandowski-600.jpg"
       Content: |
-        Cześć, jestem Jędrzej. Z powołania jestem programistą, ale z zamiłowania 
-        kończę trening do bycia lekarzem (w czerwcu). To są moje kroniki. Twórczość od 2009 do teraz. Jestem dumny z bycia katolikiem.
+        Cześć, jestem Jędrzej. Z powołania jestem programistą, a z zamiłowania lekarzem. To są moje kroniki. Twórczość od 2009 do teraz. Jestem dumny z bycia katolikiem.
         Chcesz wiedzieć więcej? => [CV Jędrzeja](https://cv.jblewandowski.pl/). Zapraszam do [kontaktu](/pl/contact) 
     menu:
       main:
@@ -76,7 +75,7 @@ languages:
           url: '/pl/category'
           weight: 4
     profilePhoto: /img/jedrzej-lewandowski-600.jpg
-    profileText: 'Cześć, jestem Jędrzej. Student 6 roku medycyny, programista senior fullstack (typescript / vue / node / golang). Ten blog jest moją kroniką.'
+    profileText: 'Cześć, jestem Jędrzej. Lekarz, programista senior fullstack (typescript / vue / node / golang). Ten blog jest moją kroniką.'
     weight: 2
     author: Jędrzej B. Lewandowski
     copyright: |
@@ -96,8 +95,7 @@ languages:
         Alt: Jędrzej Bogumił Lewandowski
         Src: "/img/jedrzej-lewandowski-600.jpg"
       Content: |
-        Hi, I'm Jędrzej (pronounced J-J). My calling is software development, but I'm also a hobbyst med student,
-        finishing the training in June. Here I present my entire chronicles to you. From 2009 till now. I'm proud to be a Catholic.
+        Hi, I'm Jędrzej (pronounced J-J). Medical doctor + fullstack developer. Here I present my entire chronicles to you. From 2009 till now. I'm proud to be a Catholic.
         Want to know more? => [CV of J-J](https://cv.jblewandowski.pl/). Any [contact](/contact) is welcome
     menu:
       main:
@@ -118,7 +116,7 @@ languages:
           url: '/category'
     author: JB Lewandowski
     profilePhoto: /img/jedrzej-lewandowski-600.jpg
-    profileText: 'Hi, I’m Jędrzej. 6th year medical student, fullstack software developer and behavioural design passionate. This blog is a chronicle of my activity.'
+    profileText: 'Hi, I’m Jędrzej. Medical doctor, fullstack software developer and behavioural design passionate. This blog is a chronicle of my activity.'
     weight: 1
     copyright: |
         Copyright &copy; 2009-now by Jędrzej Lewandowski. 
