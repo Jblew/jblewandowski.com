@@ -26,7 +26,7 @@ params:
   socialIcons: # optional
     - name: 
       text: CV
-      url: "https://cv.jblewandowski.pl"
+      url: "https://cv.jblewandowski.com"
     - name: github
       url: "https://github.com/Jblew"
     - name: linkedin
@@ -56,7 +56,7 @@ languages:
         Src: "/img/jedrzej-lewandowski-600.jpg"
       Content: |
         Cześć, jestem Jędrzej. Z powołania jestem programistą, a z zamiłowania lekarzem. To są moje kroniki. Twórczość od 2009 do teraz. Jestem dumny z bycia katolikiem.
-        Chcesz wiedzieć więcej? => [CV Jędrzeja](https://cv.jblewandowski.pl/). Zapraszam do [kontaktu](/pl/contact) 
+        Chcesz wiedzieć więcej? => [CV Jędrzeja](https://cv.jblewandowski.com/). Zapraszam do [kontaktu](/pl/contact) 
     menu:
       main:
         - name: 'Blog'
@@ -66,7 +66,7 @@ languages:
           url: '/pl/contact'
           weight: 5
         - name: 'CV	⧉'
-          url: 'https://cv.jblewandowski.pl/'
+          url: 'https://cv.jblewandowski.com/'
           weight: 1
         - name: 'Archiwum'
           url: '/pl/archives'
@@ -96,7 +96,7 @@ languages:
         Src: "/img/jedrzej-lewandowski-600.jpg"
       Content: |
         Hi, I'm Jędrzej (pronounced J-J). Medical doctor + fullstack developer. Here I present my entire chronicles to you. From 2009 till now. I'm proud to be a Catholic.
-        Want to know more? => [CV of J-J](https://cv.jblewandowski.pl/). Any [contact](/contact) is welcome
+        Want to know more? => [CV of J-J](https://cv.jblewandowski.com/). Any [contact](/contact) is welcome
     menu:
       main:
         - name: 'Blog'
@@ -107,7 +107,7 @@ languages:
           weight: 5
         - name: 'CV ⧉'
           weight: 1
-          url: 'https://cv.jblewandowski.pl/'
+          url: 'https://cv.jblewandowski.com/'
         - name: 'Archives'
           weight: 3
           url: '/archives'
