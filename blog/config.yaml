@@ -24,9 +24,6 @@ params:
   displayFullLangName: true
   ShowReadingTime: true
   socialIcons: # optional
-    - name: 
-      text: CV
-      url: "https://cv.jblewandowski.com"
     - name: github
       url: "https://github.com/Jblew"
     - name: linkedin
@@ -34,6 +31,13 @@ params:
     - name: 
       text: CodersRank
       url: "https://profile.codersrank.io/user/jblew"
+  frontNav:
+    - text: Curriculum Vitae ⧉
+      url: "https://cv.jblewandowski.com"
+      class: primary
+    - text: ⇩ blog
+      url: "#posts-top"
+      class: secondary
   images:
     - "/img/jedrzej-lewandowski-600.jpg"
   # For more date formats see https://gohugo.io/functions/format/
@@ -50,13 +54,13 @@ languages:
     LanguageName: 🇵🇱 Polski
     title: Jędrzej Lewandowski
     homeInfoParams:
-      Title: Jędrzej B. Lewandowski
+      Title: Jędrzej Bogumił Lewandowski
       Image:
         Alt: Jędrzej Bogumił Lewandowski
         Src: "/img/jedrzej-lewandowski-600.jpg"
       Content: |
-        Cześć, jestem Jędrzej. Z powołania jestem programistą, a z zamiłowania lekarzem. To są moje kroniki. Twórczość od 2009 do teraz. Jestem dumny z bycia katolikiem.
-        Chcesz wiedzieć więcej? => [CV Jędrzeja](https://cv.jblewandowski.com/). Zapraszam do [kontaktu](/pl/contact) 
+        **Lekarz + programista fullstack**. Pracuję w Warszawie. Jestem aktywnym katolikiem. Z zamiłowania zajmuję się gamifikacją.
+        Chcesz się [skontaktować ze mną?](/pl/contact) 
     menu:
       main:
         - name: 'Blog'
@@ -77,7 +81,7 @@ languages:
     profilePhoto: /img/jedrzej-lewandowski-600.jpg
     profileText: 'Cześć, jestem Jędrzej. Lekarz, programista senior fullstack (typescript / vue / node / golang). Ten blog jest moją kroniką.'
     weight: 2
-    author: Jędrzej B. Lewandowski
+    author: Jędrzej Bogumił Lewandowski
     copyright: |
         Copyright &copy; 2009-now by Jędrzej Lewandowski.
         <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
@@ -88,15 +92,14 @@ languages:
   en:
     languageName: English
     LanguageName: 🇬🇧 English
-    title: JB Lewandowski (J-J)
+    title: Jędrzej Lewandowski (J-J)
     homeInfoParams:
-      Title: JB Lewandowski
+      Title: Jędrzej Bogumił Lewandowski
       Image:
-        Alt: Jędrzej Bogumił Lewandowski
+        Alt: Jędrzej Lewandowski
         Src: "/img/jedrzej-lewandowski-600.jpg"
       Content: |
-        Hi, I'm Jędrzej (pronounced J-J). Medical doctor + fullstack developer. Here I present my entire chronicles to you. From 2009 till now. I'm proud to be a Catholic.
-        Want to know more? => [CV of J-J](https://cv.jblewandowski.com/). Any [contact](/contact) is welcome
+        **Medical doctor + fullstack software developer**. Based in Warsaw. An active Roman Catholic. Passionate abount behavioural design and gamification. Did you know that Jędrzej is easily pronounced "J-J"? Would you like to [contact me](/contact)?
     menu:
       main:
         - name: 'Blog'
@@ -114,7 +117,7 @@ languages:
         - name: 'Categories'
           weight: 4
           url: '/category'
-    author: JB Lewandowski
+    author: Jędrzej Bogumił Lewandowski
     profilePhoto: /img/jedrzej-lewandowski-600.jpg
     profileText: 'Hi, I’m Jędrzej. Medical doctor, fullstack software developer and behavioural design passionate. This blog is a chronicle of my activity.'
     weight: 1
