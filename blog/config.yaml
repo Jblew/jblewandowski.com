@@ -35,6 +35,9 @@ params:
     - text: Curriculum Vitae ⧉
       url: "https://cv.jblewandowski.com"
       class: primary
+    - text: Praktyka lekarska ⧉
+      url: "https://jblewandowski.com/praktyka/"
+      class: secondary
     - text: ⇩ blog
       url: "#posts-top"
       class: secondary
