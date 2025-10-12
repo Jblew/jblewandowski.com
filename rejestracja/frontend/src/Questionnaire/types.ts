@@ -9,6 +9,7 @@ export interface ServiceSelection {
     description: string;
     durationMinutes: number | null;
     pricePln: number;
+    paymentLink: string
 }
 
 export interface SelectionProps {

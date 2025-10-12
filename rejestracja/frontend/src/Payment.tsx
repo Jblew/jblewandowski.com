@@ -6,31 +6,36 @@ import axios from "axios"
 
 export function Payment({ service, discountPercent }: { service: ServiceSelection, discountPercent: number }) {
     const pricePln = Math.round(service.pricePln * (100 - discountPercent) / 100)
-    return <PaymentClick pricePln={pricePln} />
+    return <PaymentClick pricePln={pricePln} paymentLink={service.paymentLink} />
 }
 
-function PaymentClick({ pricePln }: { pricePln: number }) {
-    const [isEnabled, setEnabled] = useState(false)
+function PaymentClick({ pricePln, paymentLink }: { pricePln: number; paymentLink: string }) {
+    // const [isEnabled, setEnabled] = useState(false)
     
-    useEffect(() => {
-        setEnabled(false)
-    }, [pricePln])
+    // useEffect(() => {
+    //     setEnabled(false)
+    // }, [pricePln])
 
-    if(isEnabled) {
-        // const src = `https://app.fakturownia.pl/a/jedrzejlewandowski/p/W8hbdVpHfyGULqs1mL3v.js?lang=pl&price=${pricePln}`
-        // return (
-        //     <script type="text/javascript" src={src}></script>
-        // )
-        return <PaymentForPrice pricePln={pricePln} />
-    }
-    return (
+    // if(isEnabled) {
+    //     // const src = `https://app.fakturownia.pl/a/jedrzejlewandowski/p/W8hbdVpHfyGULqs1mL3v.js?lang=pl&price=${pricePln}`
+    //     // return (
+    //     //     <script type="text/javascript" src={src}></script>
+    //     // )
+    //     return <PaymentForPrice pricePln={pricePln} paymentLink={paymentLink} />
+    // }
+    // return (
+    //     <Stack>
+    //         <Button variant="primary" className="mx-auto" onClick={() => setEnabled(true)}>Przejdź do płatności</Button>
+    //     </Stack>
+    // )
+        return (
         <Stack>
-            <Button variant="primary" className="mx-auto" onClick={() => setEnabled(true)}>Przejdź do płatności</Button>
+            <Button variant="primary" className="mx-auto" href={paymentLink}>Przejdź do płatności</Button>
         </Stack>
-    )
+    ) 
 }
 
-function PaymentForPrice({ pricePln }: { pricePln: number }) {
+// function PaymentForPrice({ pricePln, paymentLink }: { pricePln: number; paymentLink: string }) {
 //     const [isLoading, setLoading] = useState(false)
 //     useEffect(() => {loadComponent().catch(console.error)}, []) // TODO error display
 //     async function loadComponent() {
@@ -51,8 +56,11 @@ function PaymentForPrice({ pricePln }: { pricePln: number }) {
 //    return (
 //         <strong>Payment will be here</strong>
 //        )
-    return (<strong>Tutaj będzie formularz płatności</strong>)
-}
+    // return (<strong>Tutaj będzie formularz płatności</strong>)
+    // return (
+    //     <script type="text/javascript" src="https://app.fakturownia.pl/a/jedrzejlewandowski/p/kz2MA0TkQxH0QOKPjSHR.js?lang=pl"></script>
+    // )
+// }
 
 
 /*
