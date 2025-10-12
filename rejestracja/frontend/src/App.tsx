@@ -6,6 +6,7 @@ import { DiscountCodeSelection } from './DiscountCode';
 import { Schedule } from './Schedule';
 import  Button  from 'react-bootstrap/Button';
 import Stack from 'react-bootstrap/Stack';
+import { Payment } from './Payment';
 
 
 export function App() {
@@ -13,6 +14,8 @@ export function App() {
     const [email, setEmail] = useState<string | null>(null);
     const [discountPercent, setDiscountPercent] = useState(0);
     const [service, setService] = useState<ServiceSelection | null>(null);
+    const [startTime, setStartTime] = useState<Date | null>(null);
+
     if(!isEnabled) {
         return (
         <Stack>
@@ -20,14 +23,18 @@ export function App() {
         </Stack>
         )
     }
+
+    const canPay = service && (!service.durationMinutes || !!startTime)
+
     return (
         <div>
-            <Auth onEmailAvailable={setEmail} />
-            {!!email && <>
+            {/* <Auth onEmailAvailable={setEmail} />
+            {!!email && <> */}
                 <Questionnaire service={service} setService={setService} discountPercent={discountPercent} />
                 <DiscountCodeSelection discountPercent={discountPercent} setDiscountPercent={setDiscountPercent} />
-                {service?.durationMinutes && <><hr /><Schedule durationMinutes={service.durationMinutes} /></>}
-            </>}
+                {service?.durationMinutes && <><hr /><Schedule durationMinutes={service.durationMinutes} onStartTimeSelect={setStartTime} /></>}
+                {service && canPay && <Payment service={service} discountPercent={discountPercent} />}
+            {/* </>} */}
         </div>
     );
 }

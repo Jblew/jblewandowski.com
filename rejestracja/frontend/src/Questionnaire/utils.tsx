@@ -58,7 +58,7 @@ export function ServiceChoice({
 
 export function ButtonsLine({ children }: { children: React.ReactNode; }) {
     return (
-        <Stack direction="horizontal" gap={2} >
+        <Stack direction="horizontal" gap={2} className='mb-4' >
             <span className='mx-auto' > </span>
             {children}
             <span className='mx-auto' > </span>

@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { ScheduleMeeting } from './vendor/react-schedule-meeting/src';
 import { getAvailableTimeSlots } from './services';
-import type { AvailableTimeslot } from './vendor/react-schedule-meeting/src/index';
+import type { AvailableTimeslot, StartTimeEvent } from './vendor/react-schedule-meeting/src';
 
-export function Schedule({ durationMinutes }: { durationMinutes: number }) {
+export function Schedule({ durationMinutes, onStartTimeSelect }: { durationMinutes: number, onStartTimeSelect: (d: Date) => void }) {
     const [availableTimeslots, setAvailableTimeslots] = useState<AvailableTimeslot[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<Error | null>(null);
@@ -38,7 +38,7 @@ export function Schedule({ durationMinutes }: { durationMinutes: number }) {
                 primaryColor="#3f5b85"
                 eventDurationInMinutes={durationMinutes}
                 availableTimeslots={availableTimeslots}
-                onStartTimeSelect={console.log}
+                onStartTimeSelect={(e) => onStartTimeSelect(e.startTime)}
             />
         );
     }

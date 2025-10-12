@@ -90,16 +90,12 @@ apiRouter.get('/user', async (req, res) => {
     }
 });
 
-apiRouter.get('/api/hello', (req, res) => {
-    res.json({
-        message: 'Hello from the API!',
-        port: PORT
-    });
-});
-
 apiRouter.get('/api/availableTimeSlots', (req, res) => {
     const availableTimeSlots: AvailableTimeslot[] = [
-        { id: '1', startTime: '2025-10-12T09:00:00+02:00', endTime: '2025-10-12T18:00:00+02:00' }
+        { id: '1', startTime: '2025-10-13T09:00:00+02:00', endTime: '2025-10-13T18:00:00+02:00' },
+        { id: '2', startTime: '2025-10-14T09:00:00+02:00', endTime: '2025-10-14T18:00:00+02:00' },
+        { id: '3', startTime: '2025-10-15T09:00:00+02:00', endTime: '2025-10-15T18:00:00+02:00' },
+        { id: '4', startTime: '2025-10-16T09:00:00+02:00', endTime: '2025-10-16T18:00:00+02:00' },
     ]
     res.json({
         availableTimeSlots
