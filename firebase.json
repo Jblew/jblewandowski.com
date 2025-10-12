@@ -7,6 +7,15 @@
         "firebase.json",
         "**/.*",
         "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "/praktyka/rejestracja/**",
+          "run": {
+            "serviceId": "rejestracja",
+            "region": "europe-central2"
+          }
+        }
       ]
     }
   ]

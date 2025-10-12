@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Simple Site</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        header,
+        footer {
+            background-color: #f4f4f4;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        #rejestracja-root {
+            border: 2px dashed #007bff;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+    </style>
+    <script>
+        window.apiBaseUrl = 'https://localhost:3000'
+    </script>
+</head>
+
+<body>
+    <main>
+        <div id="rejestracja-root"></div>
+    </main>
+
+    <!-- This script is the entry point for our app. Vite will handle it. -->
+    <script defer type="module" src="/src/main.tsx"></script>
+
+</body>
+
+</html>
