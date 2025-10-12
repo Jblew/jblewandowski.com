@@ -3,7 +3,7 @@ REPOSITORY="rejestracja"
 LOCATION="europe-central2"
 IMAGE_NAME="rejestracja"
 SERVICE_NAME="rejestracja"
-BASE_URL="https://rejestracja-2716012268.europe-central2.run.app/"
+BASE_URL="https://jblewandowski.com/praktyka/rejestracja/"
 FRONTEND_URL="https://jblewandowski.com/praktyka/"
 
 gcloud config set project "${GCLOUD_PROJECT_ID}"
