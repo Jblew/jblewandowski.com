@@ -43,14 +43,6 @@
       color: rgba(0, 0, 0, 0.6);
       text-decoration: underline;
     }
-
-    #rejestracja-root {
-      border-radius: 0.5rem;
-      border: 1px solid #aaa;
-      box-shadow: 1px 1px 8px 0px rgba(66, 66, 66, 1);
-      padding: 1rem;
-      margin: 2rem;
-    }
   </style>
   <link rel="stylesheet" crossorigin href="/praktyka/rejestracja/frontend/index.css">
   <script>
@@ -108,25 +100,58 @@
 
     <section id="cennik">
       <h2>Odpłatność i cennik</h2>
-      <div id="informacja-o-odplatnosci">
-        <p>Nie mam umowy z NFZ – wszystkie świadczenia są w pełni odpłatne.</p>
-      </div>
-      <ol>
-        <li><strong>Krótka konsultacja telefoniczna</strong> – 30 zł brutto (VAT 0%)</li>
-        <li><strong>Pełna wizyta domowa (do 1h)</strong> z utworzeniem nowej dokumentacji, przeglądem dotychczasowego
-          leczenia – 150 zł brutto (VAT 0%)</li>
-        <li><strong>Koordynacja opieki</strong> – wycena indywidualna</li>
-        <li>W uzasadnionych przypadkach <strong>udzielam konsultacji i wizyt bezpłatnych</strong></li>
-      </ol>
-      <blockquote>
-        <p><em>Podane ceny mają charakter orientacyjny. Ostateczny koszt świadczenia może zależeć od zakresu koniecznych
-            badań i procedur diagnostyczno-leczniczych, ustalanych indywidualnie podczas wizyty.</em></p>
-      </blockquote>
+      <ul>
+        <li>
+          <strong>Nowy pacjent</strong>
+          <ol>
+            <li>
+              <strong>Przejrzenie całej dokumentacji, zebranie pełnego wywiadu i ustalenie planu działania</strong>
+              <ul>
+                <li>Teleporada wideo online 60min — 120zł</li>
+                <li>Wizyta domowa 75min — 250zł</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Konsultacja z jednym problemem zdrowotnym</strong>
+              <ul>
+                <li>Teleporada wideo online 30min — 80zł</li>
+                <li>Wizyta domowa 45min — 200zł</li>
+              </ul>
+            </li>
+          </ol>
+        </li>
+        <li>
+          <strong>Powracający pacjent</strong>
+          <ol>
+            <li>
+              <strong>Kontynuacja leczenia</strong>
+              <ul>
+                <li>Recepta przez formularz — 15zł</li>
+                <li>Konsultacja telefoniczna 15min — 40zł</li>
+                <li>Konsultacja wideo online 15min — 40zł</li>
+                <li>Wizyta domowa 30min — 175zł</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Nowy problem zdrowotny</strong>
+              <ul>
+                <li>Konsultacja wideo online 30min — 80zł</li>
+                <li>Wizyta domowa 30min — 200zł</li>
+              </ul>
+            </li>
+          </ol>
+        </li>
+      </ul>
+      <p>
+        <small><i>* dojazd w promieniu 5 km od Metra Ratusz Arsenał</i></small><br />
+        <small><i>* zadzwoń do mnie żeby otrzymać kod rabatowy</i></small><br />
+        <small><i>* w uzasadnionych przypadkach udzielam konsultacji i wizyt bezpłatnych</i></small>
+      </p>
     </section>
 
     <section id="kontakt">
       <h2>Kontakt</h2>
-      <p>W celu umówienia wizyty lub teleporady proszę o kontakt e-mailowy:<br>
+      <p>W celu umówienia wizyty lub teleporady proszę o skorzystanie z powższego formularza lub kontakt e-mailowy:
         <strong>jedrzejblew@gmail.com</strong>
       </p>
       <p>Zapraszam,<br>
@@ -137,20 +162,11 @@
   <footer>
     <hr />
     <section id="informacje-prawne">
-      <h2>Informacje prawne</h2>
-
       <section id="metryczka">
         <h3>Dane praktyki</h3>
         <ul>
           <li><strong>Numer PWZ:</strong> 3619620</li>
         </ul>
-      </section>
-
-      <section id="rodo">
-        <h3>Klauzula informacyjna RODO</h3>
-        <p>Administratorem danych osobowych przekazywanych w korespondencji e-mail jest <strong>lek. Jędrzej Bogumił
-            Lewandowski</strong>. Dane przetwarzane są wyłącznie w celu prowadzenia korespondencji i udzielania
-          odpowiedzi na przesłane zapytania. Podanie danych jest dobrowolne, ale niezbędne do nawiązania kontaktu.</p>
       </section>
     </section>
   </footer>
