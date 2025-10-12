@@ -27,7 +27,7 @@ app.use((req, res, next) => {
 });
 
 app.use(function (req, res, next) {
-    const allowedOrigins: string[] = ['localhost', 'localhost:8080', '127.0.0.1', '127.0.0.1:8080', 'rejestracja-349100221449.europe-central2.run.app', 'jblewandowski.com']
+    const allowedOrigins: string[] = ['localhost', 'localhost:8080', '127.0.0.1', '127.0.0.1:8080', 'rejestracja-2716012268.europe-central2.run.app', 'jblewandowski.com']
     const origin = req.headers.origin;
     if (origin) {
         const originHostname = new URL(origin).hostname;
