@@ -7,10 +7,26 @@ declare global {
     }
 }
 
-const apiClient = axios.create({ baseURL: window.apiBaseUrl, withCredentials: true })
+const apiClient = axios.create({ 
+    baseURL: window.apiBaseUrl, 
+    withCredentials: true,
+    headers: {
+        'Cache-Control': 'no-cache, no-store, must-revalidate',
+        'Pragma': 'no-cache'
+    }
+})
+
+// Add request interceptor to append timestamp for cache busting
+apiClient.interceptors.request.use((config) => {
+    // Add timestamp to URL to prevent caching
+    const timestamp = Date.now();
+    const separator = config.url?.includes('?') ? '&' : '?';
+    config.url = `${config.url}${separator}_t=${timestamp}`;
+    return config;
+});
 
 export async function getCurrentUser(): Promise<{ loggedIn: boolean, email: string }> {
-    const resp = await apiClient.get<{ loggedIn: boolean, email: string }>('/api/user')
+    const resp = await apiClient.get<{ loggedIn: boolean, email: string }>('/user')
     return resp.data
 }
 

@@ -38,13 +38,23 @@ app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 });
+
+// No-cache headers middleware
+app.use((req, res, next) => {
+    res.set({
+        'Cache-Control': 'no-cache, no-store, must-revalidate',
+        'Pragma': 'no-cache',
+        'Expires': '0'
+    });
+    next();
+});
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 const publicPath = process.env.STATIC_ASSETS_PATH ?? path.join(__dirname, '../public')
 
 const baseUrl = mustGetEnv('BASE_URL')
 const basePath = new URL(baseUrl).pathname
-const frontendUrl = mustGetEnv('FRONTEND_URL')
 const auth0Conf = JSON.parse(readFileSync(path.join(__dirname, '../../auth0.json'), 'utf8'))
 
 app.use(basePath, express.static(publicPath));
@@ -57,16 +67,17 @@ app.use(basePath, auth({
     baseURL: baseUrl,
     clientID: auth0Conf.clientId,
     secret: auth0Conf.clientSecret,
-    issuerBaseURL: 'https://dev-dm1fjo0wgp2xrsc0.us.auth0.com',
-    afterCallback: (_req, res, session) => {
-        res.redirect(frontendUrl);
-        return session;
-    }
+    issuerBaseURL: 'https://dev-dm1fjo0wgp2xrsc0.us.auth0.com', // TODO
+    session: {
+        name: '__session' // Required for Firebase hosting rewrites policy (https://firebase.google.com/docs/hosting/manage-cache#using_cookies)
+    },
 }));
 
 // req.isAuthenticated is provided from the auth router
-apiRouter.get('/api/user', async (req, res) => {
+apiRouter.get('/user', async (req, res) => {
     try {
+        console.log('REQ OIDC', req.oidc)
+        console.log('REQ OIDC isAuthenticated', req.oidc.isAuthenticated()) 
         const isAuthenticated = req.oidc.isAuthenticated()
         if (isAuthenticated && req.oidc.user) {
             const email = req.oidc.user.email
