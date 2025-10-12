@@ -36,7 +36,18 @@
         color: rgba(0, 0, 0, 0.6);
         text-decoration: underline;
     }
+    #rejestracja-root {
+      border-radius: 0.5rem;
+      border: 1px solid #aaa;
+      box-shadow: 1px 1px 8px 0px rgba(66, 66, 66, 1);
+      padding: 1rem;
+      margin: 2rem;
+    }
   </style>
+  <link rel="stylesheet" crossorigin href="https://rejestracja-349100221449.europe-central2.run.app/frontend/index.css">
+  <script>
+    window.apiBaseUrl='https://rejestracja-349100221449.europe-central2.run.app'
+  </script>
 </head>
 <body>
   <header>
@@ -48,6 +59,10 @@
   <hr />
 
   <main>
+    <section id="o-mnie">
+      <h2>Zapisz się na wizytę</h2>
+      <div id="rejestracja-root"></div>
+    </section>
     <section id="o-mnie">
       <h2>O mnie</h2>
       <ul>
@@ -114,5 +129,6 @@
       </section>
     </section>
   </footer>
+  <script type="module" crossorigin src="https://rejestracja-349100221449.europe-central2.run.app/frontend/index.js"></script>
 </body>
 </html>
