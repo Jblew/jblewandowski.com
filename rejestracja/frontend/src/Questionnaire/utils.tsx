@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { Auth } from '../Auth';
+import React from 'react';
 import Button, { type ButtonProps } from 'react-bootstrap/esm/Button';
 import Stack from 'react-bootstrap/esm/Stack';
 import type { SelectionProps, ServiceSelection } from './types';

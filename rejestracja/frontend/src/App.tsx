@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
-import { Auth } from './Auth';
 import { Questionnaire, type ServiceSelection } from './Questionnaire';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { DiscountCodeSelection } from './DiscountCode';
-import { Schedule } from './Schedule';
 import  Button  from 'react-bootstrap/Button';
 import Stack from 'react-bootstrap/Stack';
 import { Payment } from './Payment';
@@ -11,8 +9,8 @@ import { Payment } from './Payment';
 
 export function App() {
     const [isEnabled, setEnabled] = useState<boolean>(false);
-    const [email, setEmail] = useState<string | null>(null);
     const [discountPercent, setDiscountPercent] = useState(0);
+    const [discountCode, setDiscountCode] = useState<string | null>(null);
     const [service, setService] = useState<ServiceSelection | null>(null);
     const [startTime, setStartTime] = useState<Date | null>(null);
 
@@ -24,17 +22,12 @@ export function App() {
         )
     }
 
-    const canPay = service && (!service.durationMinutes || !!startTime)
-
     return (
         <div>
-            {/* <Auth onEmailAvailable={setEmail} />
-            {!!email && <> */}
-                <Questionnaire service={service} setService={setService} discountPercent={discountPercent} />
-                <DiscountCodeSelection discountPercent={discountPercent} setDiscountPercent={setDiscountPercent} />
-                {service?.durationMinutes && <><hr /><Schedule durationMinutes={service.durationMinutes} onStartTimeSelect={setStartTime} /></>}
-                {service && canPay && <Payment service={service} discountPercent={discountPercent} />}
-            {/* </>} */}
+            <Questionnaire service={service} setService={setService} discountPercent={discountPercent} />
+            <DiscountCodeSelection discountPercent={discountPercent} setDiscountPercent={setDiscountPercent} setDiscountCode={setDiscountCode} />
+            <br />
+            {service && <Payment service={service} discountPercent={discountPercent} discountCode={discountCode} />}
         </div>
     );
 }

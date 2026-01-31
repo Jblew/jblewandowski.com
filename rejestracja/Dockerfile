@@ -17,8 +17,6 @@ ENV STATIC_ASSETS_PATH=/app/public
 ADD public /app/public/
 RUN mv /app/frontend/dist /app/public/frontend
 
-ADD auth0.json /app/auth0.json
-
 ENV PORT=80
 EXPOSE 80
 CMD ["node", "/app/backend/dist/index.js"]

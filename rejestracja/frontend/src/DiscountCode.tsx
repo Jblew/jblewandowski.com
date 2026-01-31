@@ -1,47 +1,49 @@
-import React, { useState, useEffect } from 'react';
-import Button, { type ButtonProps } from 'react-bootstrap/esm/Button';
+import React, { useState } from 'react';
+import Button from 'react-bootstrap/esm/Button';
 import Stack from 'react-bootstrap/esm/Stack';
 import Form from 'react-bootstrap/esm/Form';
 import InputGroup from 'react-bootstrap/esm/InputGroup';
+import { verifyDiscountCode } from './services';
 
-interface DiscountCode {
-    code: string
+interface MatchedCode {
     discountPercentDefault: number
     discountPercentMin: number
     discountPercentMax: number
 }
 
-const allowedDiscountCodes: DiscountCode[] = [
-    {
-        code: 'b2x19a1a',
-        discountPercentMin: 25,
-        discountPercentMax: 100,
-        discountPercentDefault: 100,
-    },
-    {
-        code: 'b2c19a0k',
-        discountPercentMin: 25,
-        discountPercentMax: 100,
-        discountPercentDefault: 100,
-    }
-]
-
-export function DiscountCodeSelection({ discountPercent, setDiscountPercent }: { discountPercent: number, setDiscountPercent: (v: number) => void }) {
+export function DiscountCodeSelection({ discountPercent, setDiscountPercent, setDiscountCode }: { discountPercent: number, setDiscountPercent: (v: number) => void, setDiscountCode: (v: string | null) => void }) {
     const [showForm, setShowForm] = useState(false);
     const [code, setCode] = useState('');
-    const [matchedCode, setMatchedCode] = useState<DiscountCode | null>(null);
+    const [matchedCode, setMatchedCode] = useState<MatchedCode | null>(null);
     const [error, setError] = useState<string | null>(null);
+    const [loading, setLoading] = useState(false);
 
-    const handleApplyCode = () => {
-        const foundCode = allowedDiscountCodes.find(c => c.code === code);
-        if (foundCode) {
-            setMatchedCode(foundCode);
-            setDiscountPercent(foundCode.discountPercentDefault);
-            setError(null);
-        } else {
+    const handleApplyCode = async () => {
+        setLoading(true);
+        setError(null);
+        try {
+            const response = await verifyDiscountCode(code);
+            if (response.valid && response.discountPercentDefault !== undefined) {
+                setMatchedCode({
+                    discountPercentDefault: response.discountPercentDefault,
+                    discountPercentMin: response.discountPercentMin!,
+                    discountPercentMax: response.discountPercentMax!,
+                });
+                setDiscountPercent(response.discountPercentDefault);
+                setDiscountCode(code);
+            } else {
+                setMatchedCode(null);
+                setDiscountPercent(0);
+                setDiscountCode(null);
+                setError("Nieprawidłowy kod rabatowy");
+            }
+        } catch {
             setMatchedCode(null);
             setDiscountPercent(0);
-            setError("Nieprawidłowy kod rabatowy");
+            setDiscountCode(null);
+            setError("Błąd weryfikacji kodu");
+        } finally {
+            setLoading(false);
         }
     };
 
@@ -49,6 +51,7 @@ export function DiscountCodeSelection({ discountPercent, setDiscountPercent }: {
         setCode('');
         setMatchedCode(null);
         setDiscountPercent(0);
+        setDiscountCode(null);
         setError(null);
     };
 
@@ -73,10 +76,10 @@ export function DiscountCodeSelection({ discountPercent, setDiscountPercent }: {
                         value={code}
                         onChange={(e) => setCode(e.target.value)}
                         isInvalid={!!error}
-                        disabled={!!matchedCode}
+                        disabled={!!matchedCode || loading}
                     />
-                    <Button variant="outline-secondary" onClick={handleApplyCode} disabled={!!matchedCode}>
-                        Zastosuj
+                    <Button variant="outline-secondary" onClick={handleApplyCode} disabled={!!matchedCode || loading}>
+                        {loading ? 'Sprawdzam...' : 'Zastosuj'}
                     </Button>
                     <Form.Control.Feedback type="invalid">
                         {error}

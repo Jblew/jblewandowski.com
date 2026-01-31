@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from 'react';
-import { Auth } from '../Auth';
 import Button, { type ButtonProps } from 'react-bootstrap/esm/Button';
 import Stack from 'react-bootstrap/esm/Stack';
 
