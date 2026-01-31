@@ -1,5 +1,3 @@
-import Button, { type ButtonProps } from 'react-bootstrap/esm/Button';
-import Stack from 'react-bootstrap/esm/Stack';
 
 export interface ServiceSelection {
     id: string;
@@ -8,6 +6,7 @@ export interface ServiceSelection {
     durationMinutes: number | null;
     pricePln: number;
     paymentLink: string
+    paymentWidgetUrl: string
 }
 
 export interface SelectionProps {
