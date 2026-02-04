@@ -79,6 +79,43 @@ const allowedDiscountCodes: DiscountCode[] = [
     }
 ]
 
+apiRouter.get('/api/payment', (req, res) => {
+    const widgetUrl = req.query.widgetUrl
+    if (!widgetUrl || typeof widgetUrl !== 'string') {
+        return res.status(400).send('Missing widgetUrl parameter')
+    }
+
+    const html = `<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Płatność - JB Lewandowski</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link href="https://s3-eu-west-1.amazonaws.com/assets.firmlet.com/assets/fakturownia/widget.css" rel="stylesheet" type="text/css" />
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <script type="text/javascript" src="${widgetUrl}"></script>
+    </div>
+</body>
+</html>`
+
+    return res.type('html').send(html)
+})
+
 apiRouter.post('/api/verifyDiscountCode', (req, res) => {
     const { code } = req.body
     if (!code || typeof code !== 'string') {
