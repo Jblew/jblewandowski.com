@@ -5,8 +5,6 @@ export interface ServiceSelection {
     description: string;
     durationMinutes: number | null;
     pricePln: number;
-    paymentLink: string
-    paymentWidgetUrl: string
 }
 
 export interface SelectionProps {

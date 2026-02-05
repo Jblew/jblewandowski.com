@@ -34,3 +34,23 @@ export async function verifyDiscountCode(code: string): Promise<DiscountCodeResp
     const resp = await apiClient.post<DiscountCodeResponse>('/api/verifyDiscountCode', { code })
     return resp.data
 }
+
+export interface CreatePaymentRequest {
+    serviceId: string
+    serviceName: string
+    amount: number
+    payerEmail: string
+    payerName: string
+    discountCode?: string
+    discountPercent?: number
+}
+
+export interface CreatePaymentResponse {
+    transactionPaymentUrl: string
+    transactionId: string
+}
+
+export async function createPayment(data: CreatePaymentRequest): Promise<CreatePaymentResponse> {
+    const resp = await apiClient.post<CreatePaymentResponse>('/api/createPayment', data)
+    return resp.data
+}

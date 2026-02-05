@@ -24,6 +24,10 @@ const allowedDiscountCodes: DiscountCode[] = [
     }
 ]
 
+export function verifyDiscountCode(code: string): DiscountCode | null {
+    return allowedDiscountCodes.find(c => c.code === code) ?? null
+}
+
 export function setupDiscountRoutes(router: Router) {
     router.post('/api/verifyDiscountCode', (req, res) => {
         const { code } = req.body

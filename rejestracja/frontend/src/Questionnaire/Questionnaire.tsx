@@ -97,8 +97,6 @@ function ReturningPatientContinuation({ service, setService, discountPercent }: 
                         description: "Przedłużenie recepty po analizie dokumentacji.",
                         durationMinutes: null,
                         pricePln: 15,
-                        paymentLink: 'https://jedrzejlewandowski.fakturownia.pl/products/hCRft0LArk8l4iN7Ym4z/autopayment',
-                        paymentWidgetUrl: 'https://app.fakturownia.pl/a/jedrzejlewandowski/p/hCRft0LArk8l4iN7Ym4z.js?lang=pl'
                     },
                     {
                         id: "returning_continuation_phone",
@@ -106,8 +104,6 @@ function ReturningPatientContinuation({ service, setService, discountPercent }: 
                         description: "Rozmowa telefoniczna dotycząca dalszego leczenia.",
                         durationMinutes: 15,
                         pricePln: 40,
-                        paymentLink: 'https://jedrzejlewandowski.fakturownia.pl/products/5uuLBVTgqTSMouMq90w3/autopayment',
-                        paymentWidgetUrl: 'https://app.fakturownia.pl/a/jedrzejlewandowski/p/5uuLBVTgqTSMouMq90w3.js?lang=pl'
                     },
                     {
                         id: "returning_continuation_video",
@@ -115,8 +111,6 @@ function ReturningPatientContinuation({ service, setService, discountPercent }: 
                         description: "Teleporada wideo dotycząca kontynuacji leczenia.",
                         durationMinutes: 15,
                         pricePln: 40,
-                        paymentLink: 'https://jedrzejlewandowski.fakturownia.pl/products/IKM62WWJ02a6RCtiGJLu/autopayment',
-                        paymentWidgetUrl: 'https://app.fakturownia.pl/a/jedrzejlewandowski/p/IKM62WWJ02a6RCtiGJLu.js?lang=pl'
                     },
                     {
                         id: "returning_continuation_home_visit",
@@ -124,8 +118,6 @@ function ReturningPatientContinuation({ service, setService, discountPercent }: 
                         description: "Kontynuacja leczenia podczas wizyty domowej.",
                         durationMinutes: 30,
                         pricePln: 175,
-                        paymentLink: 'https://jedrzejlewandowski.fakturownia.pl/products/Q0Pd5UPctxPoH36DQN0C/autopayment',
-                        paymentWidgetUrl: 'https://app.fakturownia.pl/a/jedrzejlewandowski/p/Q0Pd5UPctxPoH36DQN0C.js?lang=pl'
                     },
                 ]}
                 service={service}
@@ -148,8 +140,6 @@ function ReturningPatientNewProblem({ service, setService, discountPercent }: Se
                         description: "Teleporada wideo dotycząca nowego problemu.",
                         durationMinutes: 30,
                         pricePln: 80,
-                        paymentLink: 'https://jedrzejlewandowski.fakturownia.pl/products/Uib6a0MP5G6TO9vyllvU/autopayment',
-                        paymentWidgetUrl: 'https://app.fakturownia.pl/a/jedrzejlewandowski/p/Uib6a0MP5G6TO9vyllvU.js?lang=pl'
                     },
                     {
                         id: "returning_new_problem_home_visit",
@@ -157,8 +147,6 @@ function ReturningPatientNewProblem({ service, setService, discountPercent }: Se
                         description: "Wizyta domowa w celu diagnostyki nowego problemu.",
                         durationMinutes: 30,
                         pricePln: 200,
-                        paymentLink: 'https://jedrzejlewandowski.fakturownia.pl/products/xxZTf3YTNpo8RgMLlFns/autopayment',
-                        paymentWidgetUrl: 'https://app.fakturownia.pl/a/jedrzejlewandowski/p/xxZTf3YTNpo8RgMLlFns.js?lang=pl'
                     },
                 ]}
                 service={service}
@@ -207,8 +195,6 @@ function NewPatientFullDocumentation({ service, setService, discountPercent }: S
                     description: "Szczegółowa teleporada z omawianiem dokumentacji.",
                     durationMinutes: 60,
                     pricePln: 120,
-                    paymentLink: 'https://jedrzejlewandowski.fakturownia.pl/products/kz2MA0TkQxH0QOKPjSHR/autopayment',
-                    paymentWidgetUrl: 'https://app.fakturownia.pl/a/jedrzejlewandowski/p/kz2MA0TkQxH0QOKPjSHR.js?lang=pl'
                 },
                 {
                     id: "new_patient_full_home_visit",
@@ -216,8 +202,6 @@ function NewPatientFullDocumentation({ service, setService, discountPercent }: S
                     description: "Wizyta domowa w promieniu 5 km od adresu.",
                     durationMinutes: 75,
                     pricePln: 250,
-                    paymentLink: 'https://jedrzejlewandowski.fakturownia.pl/products/VHtA0Y782J47fynZafM7/autopayment',
-                    paymentWidgetUrl: 'https://app.fakturownia.pl/a/jedrzejlewandowski/p/VHtA0Y782J47fynZafM7.js?lang=pl'
                 },
             ]}
             service={service}
@@ -238,8 +222,6 @@ function NewPatientSingleConsultation({ service, setService, discountPercent }: 
                     description: "Teleporada dotycząca konkretnego problemu.",
                     durationMinutes: 30,
                     pricePln: 80,
-                    paymentLink: 'https://jedrzejlewandowski.fakturownia.pl/products/0j0u5Zvvh3MRu65tirwq/autopayment',
-                    paymentWidgetUrl: 'https://app.fakturownia.pl/a/jedrzejlewandowski/p/0j0u5Zvvh3MRu65tirwq.js?lang=pl'
                 },
                 {
                     id: "new_patient_single_home_visit",
@@ -247,8 +229,6 @@ function NewPatientSingleConsultation({ service, setService, discountPercent }: 
                     description: "Wizyta domowa dotycząca konkretnego problemu.",
                     durationMinutes: 45,
                     pricePln: 200,
-                    paymentLink: 'https://jedrzejlewandowski.fakturownia.pl/products/iPvaJfM41zn0ib0KJ0dV/autopayment',
-                    paymentWidgetUrl: 'https://app.fakturownia.pl/a/jedrzejlewandowski/p/iPvaJfM41zn0ib0KJ0dV.js?lang=pl'
                 },
             ]}
             service={service}
