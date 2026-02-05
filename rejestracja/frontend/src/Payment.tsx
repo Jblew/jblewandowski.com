@@ -4,13 +4,13 @@ import Button from "react-bootstrap/Button"
 import Form from "react-bootstrap/Form"
 import Alert from "react-bootstrap/Alert"
 import type { ServiceSelection } from "./Questionnaire"
-import { createPayment } from "./services"
+import { sendReceipt } from "./services"
 
 export function Payment({ service, discountPercent, discountCode }: { service: ServiceSelection, discountPercent: number, discountCode: string | null }) {
     const [payerEmail, setPayerEmail] = useState('')
-    const [payerName, setPayerName] = useState('')
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState<string | null>(null)
+    const [sent, setSent] = useState(false)
 
     const pricePln = Math.max(1, Math.round(service.pricePln * (100 - discountPercent) / 100))
 
@@ -18,61 +18,59 @@ export function Payment({ service, discountPercent, discountCode }: { service: S
         e.preventDefault()
         setError(null)
 
-        if (!payerEmail || !payerName) {
-            setError('Wypełnij wszystkie pola')
+        if (!payerEmail) {
+            setError('Podaj adres e-mail')
             return
         }
 
         setLoading(true)
         try {
-            const response = await createPayment({
+            await sendReceipt({
                 serviceId: service.id,
-                serviceName: service.type,
-                amount: service.pricePln,
                 payerEmail,
-                payerName,
                 discountCode: discountCode ?? undefined,
                 discountPercent: discountCode ? discountPercent : undefined,
             })
-
-            window.location.href = response.transactionPaymentUrl
+            setSent(true)
         } catch (err) {
-            console.error('Payment error:', err)
-            setError('Wystapil błąd podczas tworzenia płatności. Sprobuj ponownie.')
+            console.error('Błąd wysyłania paragonu:', err)
+            setError('Wystąpił błąd podczas wysyłania paragonu. Spróbuj ponownie.')
             setLoading(false)
         }
     }
 
+    if (sent) {
+        return (
+            <Stack gap={3}>
+                <Alert variant="success">
+                    <Alert.Heading>Paragon wysłany!</Alert.Heading>
+                    <p className="mb-0">
+                        Na adres <strong>{payerEmail}</strong> został wysłany paragon z linkiem do płatności.
+                        Sprawdź swoją skrzynkę e-mail.
+                    </p>
+                </Alert>
+            </Stack>
+        )
+    }
+
     return (
         <Stack gap={3}>
-            <h3>3. Dane do płatnosci</h3>
+            <h3>3. Paragon i płatność</h3>
 
             <div className="bg-light p-3 rounded">
-                <p className="mb-1"><strong>Uługa:</strong> {service.type}</p>
+                <p className="mb-1"><strong>Usługa:</strong> {service.type}</p>
                 <p className="mb-1"><strong>Opis:</strong> {service.description}</p>
                 {discountPercent > 0 ? (
                     <p className="mb-0">
-                        <strong>Cena:</strong> <del>{service.pricePln} zl</del> <span className="text-success fw-bold">{pricePln} zl</span>
+                        <strong>Cena:</strong> <del>{service.pricePln} zł</del> <span className="text-success fw-bold">{pricePln} zł</span>
                         <span className="text-muted ms-2">(-{discountPercent}%)</span>
                     </p>
                 ) : (
-                    <p className="mb-0"><strong>Cena:</strong> {pricePln} zl</p>
+                    <p className="mb-0"><strong>Cena:</strong> {pricePln} zł</p>
                 )}
             </div>
 
             <Form onSubmit={handleSubmit}>
-                <Form.Group className="mb-3" controlId="payerName">
-                    <Form.Label>Imię i nazwisko</Form.Label>
-                    <Form.Control
-                        type="text"
-                        placeholder="Jan Kowalski"
-                        value={payerName}
-                        onChange={(e) => setPayerName(e.target.value)}
-                        disabled={loading}
-                        required
-                    />
-                </Form.Group>
-
                 <Form.Group className="mb-3" controlId="payerEmail">
                     <Form.Label>Adres e-mail</Form.Label>
                     <Form.Control
@@ -84,7 +82,7 @@ export function Payment({ service, discountPercent, discountCode }: { service: S
                         required
                     />
                     <Form.Text className="text-muted">
-                        Na ten adres otrzymasz potwierdzenie płatności
+                        Na ten adres otrzymasz paragon z linkiem do płatności
                     </Form.Text>
                 </Form.Group>
 
@@ -92,13 +90,9 @@ export function Payment({ service, discountPercent, discountCode }: { service: S
 
                 <div className="d-grid">
                     <Button variant="primary" type="submit" size="lg" disabled={loading}>
-                        {loading ? 'Przekierowanie do płatności...' : `Zapłać BLIK - ${pricePln} zl`}
+                        {loading ? 'Wysyłanie...' : `Wyślij paragon z linkiem do płatności na e-mail`}
                     </Button>
                 </div>
-
-                <p className="text-muted text-center mt-2 small">
-                    Zostaniesz przekierowany na stronę Tpay w celu dokonania płatności BLIK
-                </p>
             </Form>
         </Stack>
     )

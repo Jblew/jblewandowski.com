@@ -1,6 +1,5 @@
 import express from 'express';
 import path from 'path';
-import bodyParser from 'body-parser'
 import { mustGetEnv } from './util'
 import { setupDiscountRoutes } from './discount';
 import { setupPaymentRoutes } from './payment';
@@ -50,7 +49,6 @@ app.use((req, res, next) => {
     next();
 });
 
-// app.use('/api/tpay/webhook', bodyParser.raw({type: '*/*'}));
 app.use(express.json({
     verify: function (req, res, buf, encoding) {
         (req as any).rawBody = buf;

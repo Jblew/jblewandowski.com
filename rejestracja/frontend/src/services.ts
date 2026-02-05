@@ -35,22 +35,18 @@ export async function verifyDiscountCode(code: string): Promise<DiscountCodeResp
     return resp.data
 }
 
-export interface CreatePaymentRequest {
+export interface SendReceiptRequest {
     serviceId: string
-    serviceName: string
-    amount: number
     payerEmail: string
-    payerName: string
     discountCode?: string
     discountPercent?: number
 }
 
-export interface CreatePaymentResponse {
-    transactionPaymentUrl: string
-    transactionId: string
+export interface SendReceiptResponse {
+    success: boolean
 }
 
-export async function createPayment(data: CreatePaymentRequest): Promise<CreatePaymentResponse> {
-    const resp = await apiClient.post<CreatePaymentResponse>('/api/createPayment', data)
+export async function sendReceipt(data: SendReceiptRequest): Promise<SendReceiptResponse> {
+    const resp = await apiClient.post<SendReceiptResponse>('/api/sendReceipt', data)
     return resp.data
 }

@@ -5,18 +5,12 @@ import { DiscountCodeSelection } from './DiscountCode';
 import Button from 'react-bootstrap/Button';
 import Stack from 'react-bootstrap/Stack';
 import { Payment } from './Payment';
-import { PaymentResult, usePaymentStatus } from './PaymentResult';
 
 export function App() {
     const [isEnabled, setEnabled] = useState<boolean>(false);
     const [discountPercent, setDiscountPercent] = useState(0);
     const [discountCode, setDiscountCode] = useState<string | null>(null);
     const [service, setService] = useState<ServiceSelection | null>(null);
-    const { paymentStatus, clearPaymentStatus } = usePaymentStatus();
-
-    if (paymentStatus) {
-        return <PaymentResult status={paymentStatus} onClose={clearPaymentStatus} />;
-    }
 
     if (!isEnabled) {
         return (
