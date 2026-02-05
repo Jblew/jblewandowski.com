@@ -1,6 +1,4 @@
-import express, { Router } from 'express';
-import path from 'path';
-import { mustGetEnv } from './util'
+import { Router } from 'express';
 
 interface DiscountCode {
     code: string

@@ -15,16 +15,15 @@ export function App() {
     if (!isEnabled) {
         return (
             <Stack>
-                <Button variant='primary' className='mx-auto' onClick={() => setEnabled(true)}>Przejdź do rejestracji</Button>
+                <Button variant='primary' className='mx-auto' onClick={() => setEnabled(true)}>Zapisz się na wizytę</Button>
             </Stack>
         );
     }
 
     return (
         <div>
-            <Questionnaire service={service} setService={setService} discountPercent={discountPercent} />
-            <DiscountCodeSelection discountPercent={discountPercent} setDiscountPercent={setDiscountPercent} setDiscountCode={setDiscountCode} />
-            <br />
+            <Questionnaire service={service} setService={setService} />
+            {service && <DiscountCodeSelection discountPercent={discountPercent} setDiscountPercent={setDiscountPercent} setDiscountCode={setDiscountCode} /> }
             {service && <Payment service={service} discountPercent={discountPercent} discountCode={discountCode} />}
         </div>
     );

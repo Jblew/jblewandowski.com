@@ -10,5 +10,4 @@ export interface ServiceSelection {
 export interface SelectionProps {
     service: ServiceSelection | null;
     setService: (service: ServiceSelection | null) => void;
-    discountPercent: number;
 }

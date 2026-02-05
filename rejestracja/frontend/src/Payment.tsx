@@ -55,7 +55,7 @@ export function Payment({ service, discountPercent, discountCode }: { service: S
 
     return (
         <Stack gap={3}>
-            <h3>3. Paragon i płatność</h3>
+            <h3>Paragon i płatność</h3>
 
             <div className="bg-light p-3 rounded">
                 <p className="mb-1"><strong>Usługa:</strong> {service.type}</p>

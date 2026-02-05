@@ -31,15 +31,15 @@ PowracajacyNowyProblem --> PowracajacyNowyProblemWizytaDomowa["Wizyta domowa<br 
 ```
 */
 
-export function Questionnaire({ service, setService, discountPercent }: SelectionProps) {
+export function Questionnaire({ service, setService }: SelectionProps) {
     return (
-        <IsReturningPatient service={service} setService={setService} discountPercent={discountPercent} />
+        <IsReturningPatient service={service} setService={setService} />
     );
 }
 
 
 
-function IsReturningPatient({ service, setService, discountPercent }: SelectionProps) {
+function IsReturningPatient({ service, setService }: SelectionProps) {
     const [isReturning, setIsReturning] = useState<boolean | null>(null);
 
     const handleClick = (value: boolean) => {
@@ -51,18 +51,18 @@ function IsReturningPatient({ service, setService, discountPercent }: SelectionP
 
     return (
         <>
-            <h3>2. Czy jesteś już moim pacjentem?</h3>
+            <h3>Czy jesteś już moim pacjentem?</h3>
             <ButtonsLine>
                 <SelectionButton value={true} selectedValue={isReturning} onClick={() => handleClick(true)}>Tak</SelectionButton>
                 <SelectionButton value={false} selectedValue={isReturning} onClick={() => handleClick(false)}>Nie</SelectionButton>
             </ButtonsLine>
-            {isReturning === true && <ReturningPatient service={service} setService={setService} discountPercent={discountPercent} />}
-            {isReturning === false && <NewPatient service={service} setService={setService} discountPercent={discountPercent} />}
+            {isReturning === true && <ReturningPatient service={service} setService={setService} />}
+            {isReturning === false && <NewPatient service={service} setService={setService} />}
         </>
     );
 }
 
-function ReturningPatient({ service, setService, discountPercent }: SelectionProps) {
+function ReturningPatient({ service, setService }: SelectionProps) {
     const [isContinuation, setIsContinuation] = useState<boolean | null>(null);
 
     const handleClick = (value: boolean) => {
@@ -74,18 +74,18 @@ function ReturningPatient({ service, setService, discountPercent }: SelectionPro
 
     return (
         <>
-            <h4>Czy chcesz kontynuować leczenie?</h4>
+            <h3>Czy chcesz kontynuować leczenie?</h3>
             <ButtonsLine>
                 <SelectionButton value={true} selectedValue={isContinuation} onClick={() => handleClick(true)}>Kontynuacja leczenia</SelectionButton>
                 <SelectionButton value={false} selectedValue={isContinuation} onClick={() => handleClick(false)}>Nowy problem zdrowotny</SelectionButton>
             </ButtonsLine>
-            {isContinuation === true && <ReturningPatientContinuation service={service} setService={setService} discountPercent={discountPercent} />}
-            {isContinuation === false && <ReturningPatientNewProblem service={service} setService={setService} discountPercent={discountPercent} />}
+            {isContinuation === true && <ReturningPatientContinuation service={service} setService={setService} />}
+            {isContinuation === false && <ReturningPatientNewProblem service={service} setService={setService} />}
         </>
     );
 }
 
-function ReturningPatientContinuation({ service, setService, discountPercent }: SelectionProps) {
+function ReturningPatientContinuation({ service, setService }: SelectionProps) {
     return (
         <>
             <ServiceChoice
@@ -122,13 +122,12 @@ function ReturningPatientContinuation({ service, setService, discountPercent }: 
                 ]}
                 service={service}
                 setService={setService}
-                discountPercent={discountPercent}
             />
         </>
     );
 }
 
-function ReturningPatientNewProblem({ service, setService, discountPercent }: SelectionProps) {
+function ReturningPatientNewProblem({ service, setService }: SelectionProps) {
     return (
         <>
             <ServiceChoice
@@ -151,13 +150,12 @@ function ReturningPatientNewProblem({ service, setService, discountPercent }: Se
                 ]}
                 service={service}
                 setService={setService}
-                discountPercent={discountPercent}
             />
         </>
     );
 }
 
-function NewPatient({ service, setService, discountPercent }: SelectionProps) {
+function NewPatient({ service, setService }: SelectionProps) {
     const [visitType, setVisitType] = useState<"full" | "single" | null>(null);
 
     const handleClick = (value: "full" | "single") => {
@@ -169,7 +167,7 @@ function NewPatient({ service, setService, discountPercent }: SelectionProps) {
 
     return (
         <>
-            <h4>Jaki zakres konsultacji jest potrzebny?</h4>
+            <h3>Jaki zakres konsultacji jest potrzebny?</h3>
             <ButtonsLine>
                 <SelectionButton value="full" selectedValue={visitType} onClick={() => handleClick("full")}>
                     Przejrzenie całej dokumentacji i opracowanie planu
@@ -178,13 +176,13 @@ function NewPatient({ service, setService, discountPercent }: SelectionProps) {
                     Konsultacja z jednym problemem zdrowotnym
                 </SelectionButton>
             </ButtonsLine>
-            {visitType === "full" && <NewPatientFullDocumentation service={service} setService={setService} discountPercent={discountPercent} />}
-            {visitType === "single" && <NewPatientSingleConsultation service={service} setService={setService} discountPercent={discountPercent} />}
+            {visitType === "full" && <NewPatientFullDocumentation service={service} setService={setService} />}
+            {visitType === "single" && <NewPatientSingleConsultation service={service} setService={setService} />}
         </>
     );
 }
 
-function NewPatientFullDocumentation({ service, setService, discountPercent }: SelectionProps) {
+function NewPatientFullDocumentation({ service, setService }: SelectionProps) {
     return (
         <ServiceChoice
             question="Wybierz formę konsultacji:"
@@ -206,12 +204,11 @@ function NewPatientFullDocumentation({ service, setService, discountPercent }: S
             ]}
             service={service}
             setService={setService}
-            discountPercent={discountPercent}
         />
     );
 }
 
-function NewPatientSingleConsultation({ service, setService, discountPercent }: SelectionProps) {
+function NewPatientSingleConsultation({ service, setService }: SelectionProps) {
     return (
         <ServiceChoice
             question="Wybierz formę konsultacji:"
@@ -233,7 +230,6 @@ function NewPatientSingleConsultation({ service, setService, discountPercent }: 
             ]}
             service={service}
             setService={setService}
-            discountPercent={discountPercent}
         />
     );
 }

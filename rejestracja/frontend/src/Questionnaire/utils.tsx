@@ -3,32 +3,11 @@ import Button, { type ButtonProps } from 'react-bootstrap/esm/Button';
 import Stack from 'react-bootstrap/esm/Stack';
 import type { SelectionProps, ServiceSelection } from './types';
 
-export function ServiceSummary({ selection, discountPercent }: { selection: ServiceSelection, discountPercent: number }) {
-    const discountedPrice = Math.round(selection.pricePln * (1 - discountPercent / 100));
-    const hasDiscount = discountPercent > 0;
-
-    return (
-        <div>
-            <h4>Wybrana usługa: {selection.type} </h4>
-            < p > {selection.description} </p>
-            < p > Czas trwania: {selection.durationMinutes === null ? "Asynchronicznie" : `${selection.durationMinutes} min`} </p>
-            {hasDiscount ? (
-                <p>
-                    Cena: <del>{selection.pricePln} zł</del> {discountedPrice} zł
-                </p>
-            ) : (
-                <p>Cena: {selection.pricePln} zł</p>
-            )}
-        </div>
-    );
-}
-
 export function ServiceChoice({
     question,
     options,
     service,
     setService,
-    discountPercent,
 }: {
     question: string;
     options: ServiceSelection[];
@@ -50,7 +29,6 @@ export function ServiceChoice({
                     ))
                 }
             </ButtonsLine>
-            {service && <ServiceSummary selection={service} discountPercent={discountPercent} />}
         </>
     );
 }
