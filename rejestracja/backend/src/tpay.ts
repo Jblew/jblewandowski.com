@@ -1,7 +1,8 @@
-import { mustGetEnv } from '../util'
-import * as jose from 'jose'
+import { mustGetEnv } from './util'
 import { readFileSync } from 'fs'
 import { join } from 'path'
+import { createVerify, X509Certificate } from 'crypto'
+import { type Request } from 'express'
 
 const TPAY_API_URL = mustGetEnv('TPAY_API_URL')
 const TPAY_CLIENT_ID = mustGetEnv('TPAY_CLIENT_ID')
@@ -36,6 +37,31 @@ interface TpayTransactionResponse {
     transactionId: string
     transactionPaymentUrl: string
     status: string
+}
+
+export interface TpayNotificationPayload {
+    id: string
+    tr_id: string
+    tr_date: string
+    tr_crc: string
+    tr_amount: string
+    tr_paid: string
+    tr_desc: string
+    tr_status: string
+    tr_error: string
+    tr_email: string
+    md5sum: string
+    test_mode: string
+    card_token?: string
+    token_expiry_date?: string
+    card_tail?: string
+    card_brand?: string
+}
+
+export interface VerifyJWSResult {
+    result: string
+    body: TpayNotificationPayload | null
+    status: number
 }
 
 let cachedToken: { token: string; expiresAt: number } | null = null
@@ -107,40 +133,61 @@ export async function createTransaction(params: TpayTransactionRequest): Promise
     return data
 }
 
-// JWS Signature Verification
-const isSandbox = TPAY_API_URL.includes('sandbox')
-const jwsCertPath = join(__dirname, isSandbox ? 'jws_sandbox.pem' : 'jws_prod.pem')
-const jwsCertPem = readFileSync(jwsCertPath, 'utf-8')
+export async function verifyJWSSignature(req: Request): Promise<VerifyJWSResult> {
+  const fail = (reason: string): VerifyJWSResult => ({
+    result: `FALSE - ${reason}`,
+    body: null,
+    status: 400,
+  })
 
-let cachedPublicKey: Awaited<ReturnType<typeof jose.importX509>> | null = null
+  const jws = req.headers["x-jws-signature"];
 
-async function getJwsPublicKey() {
-    if (!cachedPublicKey) {
-        cachedPublicKey = await jose.importX509(jwsCertPem, 'RS256')
-    }
-    return cachedPublicKey
-}
+  if (!jws || typeof jws !== 'string') {
+    return fail("Missing JWS header")
+  }
 
-export async function verifyJwsSignature(body: string, signature: string): Promise<boolean> {
-    try {
-        const publicKey = await getJwsPublicKey()
+  const jwsData = jws.split(".");
+  const headerPart = jwsData[0];
+  const signaturePart = jwsData[2];
+  const rawBody = new URLSearchParams(req.body).toString();
 
-        // JWS detached signature format: header..signature (payload is empty in the token)
-        // Reconstruct the full JWS with the body as payload
-        const parts = signature.split('.')
-        if (parts.length !== 3) {
-            console.error('Invalid JWS signature format')
-            return false
-        }
+  const headerDecoded = Buffer.from(headerPart.replace(/-/g, "+").replace(/_/g, "/"), "base64").toString("ascii");
+  const headerJson = JSON.parse(headerDecoded);
 
-        const [header, , sig] = parts
-        const payloadBase64 = jose.base64url.encode(new TextEncoder().encode(body))
-        const fullJws = `${header}.${payloadBase64}.${sig}`
+  if (!headerJson.x5u) {
+    return fail("Missing x5u header")
+  }
 
-        await jose.compactVerify(fullJws, publicKey)
-        return true
-    } catch (error) {
-        console.error('JWS verification failed:', error)
-        return false
-    }
+  if (!headerJson.x5u.startsWith("https://secure.tpay.com")) {
+    return fail("Wrong x5u URL")
+  }
+
+  const [signingCert, caCert] = await Promise.all([fetch(headerJson.x5u).then((res) => res.text()), fetch("https://secure.tpay.com/x509/tpay-jws-root.pem").then((res) => res.text())]);
+
+  const x5uCert = new X509Certificate(signingCert);
+  const caCertPublicKey = new X509Certificate(caCert).publicKey;
+
+  if (!x5uCert.verify(caCertPublicKey)) {
+    return fail("Signing certificate is not signed by Tpay CA certificate")
+  }
+
+  const payload = Buffer.from(rawBody, "utf8").toString("base64").replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+  const decodedSignature = Buffer.from(signaturePart.replace(/-/g, "+").replace(/_/g, "/"), "base64");
+
+  const verifier = createVerify("SHA256");
+  verifier.update(`${headerPart}.${payload}`);
+  verifier.end();
+
+  const publicKey = x5uCert.publicKey;
+  const isValid = verifier.verify(publicKey, decodedSignature);
+
+  if (!isValid) {
+    return fail("Invalid JWS signature")
+  }
+
+  return {
+    result: "TRUE",
+    body: req.body as TpayNotificationPayload,
+    status: 200,
+  }
 }

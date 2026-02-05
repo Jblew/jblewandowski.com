@@ -1,5 +1,6 @@
 import express from 'express';
 import path from 'path';
+import bodyParser from 'body-parser'
 import { mustGetEnv } from './util'
 import { setupDiscountRoutes } from './discount';
 import { setupPaymentRoutes } from './payment';
@@ -49,7 +50,12 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use(express.json());
+// app.use('/api/tpay/webhook', bodyParser.raw({type: '*/*'}));
+app.use(express.json({
+    verify: function (req, res, buf, encoding) {
+        (req as any).rawBody = buf;
+    }
+}));
 app.use(express.urlencoded({ extended: true }));
 const publicPath = process.env.STATIC_ASSETS_PATH ?? path.join(__dirname, '../public')
 
