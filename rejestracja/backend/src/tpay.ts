@@ -158,11 +158,14 @@ export async function verifyJWSSignature(req: Request): Promise<VerifyJWSResult>
     return fail("Missing x5u header")
   }
 
-  if (!headerJson.x5u.startsWith("https://secure.tpay.com")) {
-    return fail("Wrong x5u URL")
+  const isSandbox = TPAY_API_URL.includes('sandbox')
+  const expectedX5uUrlStart = isSandbox ? "https://secure.sandbox.tpay.com" : "https://secure.tpay.com"
+  if (!headerJson.x5u.startsWith(expectedX5uUrlStart)) {
+    return fail("Wrong x5u URL '" + headerJson.x5u + "'")
   }
 
-  const [signingCert, caCert] = await Promise.all([fetch(headerJson.x5u).then((res) => res.text()), fetch("https://secure.tpay.com/x509/tpay-jws-root.pem").then((res) => res.text())]);
+  const rootCaCert = isSandbox ? "https://secure.sandbox.tpay.com/x509/tpay-jws-root.pem" : "https://secure.tpay.com/x509/tpay-jws-root.pem"
+  const [signingCert, caCert] = await Promise.all([fetch(headerJson.x5u).then((res) => res.text()), fetch(rootCaCert).then((res) => res.text())]);
 
   const x5uCert = new X509Certificate(signingCert);
   const caCertPublicKey = new X509Certificate(caCert).publicKey;

@@ -19,7 +19,7 @@ export function Payment({ service, discountPercent, discountCode }: { service: S
         setError(null)
 
         if (!payerEmail || !payerName) {
-            setError('Wypelnij wszystkie pola')
+            setError('Wypełnij wszystkie pola')
             return
         }
 
@@ -38,17 +38,17 @@ export function Payment({ service, discountPercent, discountCode }: { service: S
             window.location.href = response.transactionPaymentUrl
         } catch (err) {
             console.error('Payment error:', err)
-            setError('Wystapil blad podczas tworzenia platnosci. Sprobuj ponownie.')
+            setError('Wystapil błąd podczas tworzenia płatności. Sprobuj ponownie.')
             setLoading(false)
         }
     }
 
     return (
         <Stack gap={3}>
-            <h3>3. Dane do platnosci</h3>
+            <h3>3. Dane do płatnosci</h3>
 
             <div className="bg-light p-3 rounded">
-                <p className="mb-1"><strong>Usluga:</strong> {service.type}</p>
+                <p className="mb-1"><strong>Uługa:</strong> {service.type}</p>
                 <p className="mb-1"><strong>Opis:</strong> {service.description}</p>
                 {discountPercent > 0 ? (
                     <p className="mb-0">
@@ -62,7 +62,7 @@ export function Payment({ service, discountPercent, discountCode }: { service: S
 
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="payerName">
-                    <Form.Label>Imie i nazwisko</Form.Label>
+                    <Form.Label>Imię i nazwisko</Form.Label>
                     <Form.Control
                         type="text"
                         placeholder="Jan Kowalski"
@@ -74,7 +74,7 @@ export function Payment({ service, discountPercent, discountCode }: { service: S
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="payerEmail">
-                    <Form.Label>Adres email</Form.Label>
+                    <Form.Label>Adres e-mail</Form.Label>
                     <Form.Control
                         type="email"
                         placeholder="jan.kowalski@example.com"
@@ -84,7 +84,7 @@ export function Payment({ service, discountPercent, discountCode }: { service: S
                         required
                     />
                     <Form.Text className="text-muted">
-                        Na ten adres otrzymasz potwierdzenie platnosci
+                        Na ten adres otrzymasz potwierdzenie płatności
                     </Form.Text>
                 </Form.Group>
 
@@ -92,12 +92,12 @@ export function Payment({ service, discountPercent, discountCode }: { service: S
 
                 <div className="d-grid">
                     <Button variant="primary" type="submit" size="lg" disabled={loading}>
-                        {loading ? 'Przekierowanie do platnosci...' : `Zaplac BLIK - ${pricePln} zl`}
+                        {loading ? 'Przekierowanie do płatności...' : `Zapłać BLIK - ${pricePln} zl`}
                     </Button>
                 </div>
 
                 <p className="text-muted text-center mt-2 small">
-                    Zostaniesz przekierowany na strone Tpay w celu dokonania platnosci BLIK
+                    Zostaniesz przekierowany na stronę Tpay w celu dokonania płatności BLIK
                 </p>
             </Form>
         </Stack>

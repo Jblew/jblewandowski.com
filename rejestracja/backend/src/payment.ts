@@ -2,6 +2,7 @@ import { Router } from "express";
 import { createTransaction, verifyJWSSignature } from "./tpay";
 import { verifyDiscountCode } from "./discount";
 import { getProduct } from "./products";
+import { createAndSendReceipt } from "./fakturownia";
 import { mustGetEnv } from "./util";
 
 const BASE_URL = mustGetEnv('BASE_URL')
@@ -80,8 +81,30 @@ export function setupPaymentRoutes(router: Router) {
 
     router.post('/api/tpay/webhook', async (req, res) => {
         const { result, body, status } = await verifyJWSSignature(req)
+        console.dir({ result, body, status })
         if (body) {
             console.log('Tpay notification:', body.tr_id, body.tr_status)
+        }
+        const isSuccess = body?.tr_status === 'TRUE'
+
+        if(isSuccess) {
+            console.log('Sukces płatności, wysyłanie paragonu')
+            const email = body?.tr_email
+            if(!email) {
+                console.log('400 — brak email')
+                return res.status(400).end('FALSE — brak email')
+            }
+
+            try {
+                await createAndSendReceipt({
+                    buyerEmail: email,
+                    description: body!.tr_desc,
+                    amount: parseFloat(body!.tr_amount),
+                })
+                console.log('E-paragon sent to:', email)
+            } catch (err) {
+                console.error('Failed to create/send receipt:', err)
+            }
         }
         return res.status(status).end(result)
     })
