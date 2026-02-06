@@ -1,7 +1,7 @@
 import { Router } from "express";
 import { verifyDiscountCode } from "./discount";
 import { getProduct } from "./products";
-import { createReceipt, sendReceiptByEmail } from "./fakturownia";
+import { createReceipt, sendReceiptByEmail, fiscalizeReceipt } from "./fakturownia";
 
 interface EncryptedPayload {
     encryptedKey: string
@@ -83,6 +83,40 @@ export function setupPaymentRoutes(router: Router) {
         } catch (error) {
             console.error('Błąd wysyłania paragonu:', error)
             return res.status(500).json({ error: 'Nie udało się wysłać paragonu' })
+        }
+    })
+
+    // Webhook wywoływany przez Fakturownię po udanej płatności
+    router.get('/api/payment-webhook', async (req, res) => {
+        try {
+            const invoiceId = req.query.invoice_id as string
+            const paid = req.query.paid as string
+
+            console.log('Payment webhook received:', { invoiceId, paid })
+
+            if (!invoiceId) {
+                console.error('Webhook: brak invoice_id')
+                return res.status(400).json({ error: 'Brak invoice_id' })
+            }
+
+            if (paid !== 'true') {
+                console.log('Webhook: płatność nieudana, pomijam fiskalizację')
+                return res.json({ success: true, fiscalized: false })
+            }
+
+            const receiptId = parseInt(invoiceId, 10)
+            if (isNaN(receiptId)) {
+                console.error('Webhook: nieprawidłowe invoice_id:', invoiceId)
+                return res.status(400).json({ error: 'Nieprawidłowe invoice_id' })
+            }
+
+            await fiscalizeReceipt(receiptId)
+            console.log('Webhook: paragon sfiskalizowany, id:', receiptId)
+
+            return res.json({ success: true, fiscalized: true, receiptId, invoiceId })
+        } catch (error) {
+            console.error('Błąd webhooka płatności:', error)
+            return res.status(500).json({ error: 'Błąd fiskalizacji' })
         }
     })
 }

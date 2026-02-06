@@ -80,6 +80,28 @@ export async function sendReceiptByEmail(receiptId: number): Promise<void> {
     console.log('Receipt email sent successfully')
 }
 
+export async function fiscalizeReceipt(receiptId: number): Promise<void> {
+    console.log('Fiscalizing receipt:', receiptId)
+
+    const url = `${FAKTUROWNIA_URL}/invoices/fiscal_print.json?id=${receiptId}&mode=e-receipt`
+
+    const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+            'Authorization': `Bearer ${FAKTUROWNIA_API_TOKEN}`,
+        },
+    })
+    console.log('Fiscalization response', response)
+    console.dir(response)
+
+    if (!response.ok) {
+        const text = await response.text()
+        throw new Error(`Fakturownia fiscalization failed: ${response.status} ${text}`)
+    }
+
+    console.log('Receipt fiscalized successfully, id:', receiptId)
+}
+
 export async function createAndSendReceipt(params: {
     buyerEmail: string
     description: string
