@@ -57,9 +57,9 @@ export function DiscountCodeSelection({ discountPercent, setDiscountPercent, set
 
     if (!showForm) {
         return (
-            <div className="text-end">
-                <Button variant="link" onClick={() => setShowForm(true)}>
-                    Czy masz kod zniżkowy?
+            <div className="text-center">
+                <Button variant="outline-secondary" size="sm" onClick={() => setShowForm(true)}>
+                    Dodaj kod rabatowy
                 </Button>
             </div>
         );
