@@ -1,7 +1,7 @@
 import { Router } from "express";
 import { verifyDiscountCode } from "./discount";
 import { getProduct } from "./products";
-import { createReceipt, sendReceiptByEmail, fiscalizeReceipt } from "./fakturownia";
+import { createReceipt, sendReceiptByEmail, fiscalizeReceipt, ReceiptPosition } from "./fakturownia";
 
 interface EncryptedPayload {
     encryptedKey: string
@@ -54,22 +54,16 @@ export function setupPaymentRoutes(router: Router) {
                 console.log(`${logMatchingID} DANE WIZYTY  ${body.payerEmail} ${JSON.stringify(body.encryptedPatientData)}`)
             }
 
-            const positions = [{
+            // Actual discount % after clipping price to minimum 1 PLN
+            const actualDiscountPercent = Math.floor(((product.pricePln - finalAmount) / product.pricePln) * 100)
+            const positions: ReceiptPosition[] = [{
                 name: `Wizyta — ${product.name}`,
                 tax: 'zw' as const,
                 total_price_gross: product.pricePln,
+                discount_percent: actualDiscountPercent,
                 quantity: 1,
             }]
 
-            if (discountPercent > 0) {
-                const discountAmount = product.pricePln - finalAmount
-                positions.push({
-                    name: `Rabat (kod ${body.discountCode})`,
-                    tax: 'zw' as const,
-                    total_price_gross: -discountAmount,
-                    quantity: 1,
-                })
-            }
 
             const receipt = await createReceipt({
                 buyerEmail: body.payerEmail,

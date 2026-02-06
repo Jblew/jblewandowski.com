@@ -5,11 +5,12 @@ const FAKTUROWNIA_API_TOKEN = mustGetEnv('FAKTUROWNIA_API_TOKEN')
 const SELLER_NAME = "Jędrzej Lewandowski"
 const SELLER_TAX_NO = "7393970235"
 
-interface ReceiptPosition {
+export interface ReceiptPosition {
     name: string
     tax: number | string
     total_price_gross: number
     quantity: number
+    discount_percent?: number
 }
 
 interface CreateReceiptParams {
@@ -26,7 +27,7 @@ interface ReceiptResponse {
 
 export async function createReceipt(params: CreateReceiptParams): Promise<ReceiptResponse> {
     const today = new Date().toISOString().split('T')[0]
-
+    const hasDiscounts = params.positions.some((p) => typeof p.discount_percent === 'number' && p.discount_percent > 0)
     const body = {
         invoice: {
             kind: 'receipt',
@@ -37,6 +38,10 @@ export async function createReceipt(params: CreateReceiptParams): Promise<Receip
             seller_tax_no: SELLER_TAX_NO,
             buyer_email: params.buyerEmail,
             positions: params.positions,
+            ...(hasDiscounts ? {
+                show_discount: true,
+                discount_kind: "percent_unit_gross"
+            }: {})
         }
     }
 
