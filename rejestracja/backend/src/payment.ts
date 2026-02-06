@@ -50,9 +50,8 @@ export function setupPaymentRoutes(router: Router) {
 
             // Log encrypted patient data
             if (body.encryptedPatientData) {
-                console.log('=== ZASZYFROWANE DANE PACJENTA ===')
-                console.log(JSON.stringify(body.encryptedPatientData, null, 2))
-                console.log('=== KONIEC ZASZYFROWANYCH DANYCH ===')
+                const logMatchingID = '8d4b8ahi4dza4fc68a18mj021b9uya08'
+                console.log(`${logMatchingID} DANE WIZYTY  ${body.payerEmail} ${JSON.stringify(body.encryptedPatientData)}`)
             }
 
             const positions = [{

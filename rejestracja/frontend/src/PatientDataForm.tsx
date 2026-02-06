@@ -61,8 +61,8 @@ export function PatientDataForm({ service, patientData, setPatientData, disabled
 
     return (
         <>
-            <Alert variant="info" className="d-flex align-items-center gap-2 mb-3">
-                    Pola oznaczone kłódką (🔐) są <strong>szyfrowane</strong> i mogą zostać odczytane wyłącznie przez lekarza.
+            <Alert variant="info">
+                    Pola oznaczone kłódką (🔐) są <strong>szyfrowane</strong> i mogą zostać odczytane wyłącznie przeze mnie (lekarza Jędrzeja Lewandowskiego).
             </Alert>
 
             <EncryptedInput

@@ -75,19 +75,7 @@ export function Payment({ service, discountPercent, discountCode }: { service: S
         }
     }
 
-    if (sent) {
-        return (
-            <Stack gap={3}>
-                <Alert variant="success">
-                    <Alert.Heading>Paragon wysłany!</Alert.Heading>
-                    <p className="mb-0">
-                        Na adres <strong>{payerEmail}</strong> został wysłany paragon z linkiem do płatności.
-                        Sprawdź swoją skrzynkę e-mail.
-                    </p>
-                </Alert>
-            </Stack>
-        )
-    }
+    const disabled = loading || sent
 
     return (
         <Stack gap={3}>
@@ -110,7 +98,7 @@ export function Payment({ service, discountPercent, discountCode }: { service: S
                     service={service}
                     patientData={patientData}
                     setPatientData={setPatientData}
-                    disabled={loading}
+                    disabled={disabled}
                 />
 
                 <Form.Group className="mb-3" controlId="payerEmail">
@@ -120,7 +108,7 @@ export function Payment({ service, discountPercent, discountCode }: { service: S
                         placeholder="jan.kowalski@example.com"
                         value={payerEmail}
                         onChange={(e) => setPayerEmail(e.target.value)}
-                        disabled={loading}
+                        disabled={disabled}
                         required
                     />
                     <Form.Text className="text-muted">
@@ -130,12 +118,25 @@ export function Payment({ service, discountPercent, discountCode }: { service: S
 
                 {error && <Alert variant="danger">{error}</Alert>}
 
-                <div className="d-grid">
-                    <Button variant="primary" type="submit" size="lg" disabled={loading}>
-                        {loading ? 'Wysyłanie...' : `Wyślij link do płatności`}
-                    </Button>
-                </div>
+                {!sent && (
+                    <div className="d-grid">
+                        <Button variant="primary" type="submit" size="lg" disabled={loading}>
+                            {loading ? 'Wysyłanie...' : `Wyślij link do płatności`}
+                        </Button>
+                    </div>
+                )}
             </Form>
+
+            {sent && (
+                <Alert variant="success">
+                    <Alert.Heading>Link do płatności wysłany!</Alert.Heading>
+                    <p className="mb-0">
+                        Na adres <strong>{payerEmail}</strong> został wysłany paragon z linkiem do płatności.
+                        Sprawdź swoją skrzynkę e-mail. Natomiast dane z formularza zostały wysłane w zaszyfrowanej
+                        formie do mnie (lekarza Jędrzeja Lewandowskiego).
+                    </p>
+                </Alert>
+            )}
         </Stack>
     )
 }
