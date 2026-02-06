@@ -14,7 +14,7 @@ export function ServiceChoice({
 } & SelectionProps) {
     return (
         <>
-            <h4>{question} </h4>
+            <h4>{question}</h4>
             <ButtonsLine>
                 {
                     options.map((option) => (
@@ -35,7 +35,7 @@ export function ServiceChoice({
 
 export function ButtonsLine({ children }: { children: React.ReactNode; }) {
     return (
-        <Stack direction="horizontal" gap={2} className='mb-4' >
+        <Stack direction="horizontal" gap={2} className='mb-4' style={{'overflowX': 'scroll'}} >
             <span className='mx-auto' > </span>
             {children}
             <span className='mx-auto' > </span>
