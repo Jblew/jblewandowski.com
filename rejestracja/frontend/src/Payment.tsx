@@ -56,8 +56,7 @@ export function Payment({ service, discountPercent, discountCode }: { service: S
     return (
         <Stack gap={3}>
             <h3>Paragon i płatność</h3>
-
-            <div className="bg-light p-3 rounded">
+            <Alert variant="info" className="mb-0">
                 <p className="mb-1"><strong>Usługa:</strong> {service.type}</p>
                 <p className="mb-1"><strong>Opis:</strong> {service.description}</p>
                 {discountPercent > 0 ? (
@@ -68,7 +67,7 @@ export function Payment({ service, discountPercent, discountCode }: { service: S
                 ) : (
                     <p className="mb-0"><strong>Cena:</strong> {pricePln} zł</p>
                 )}
-            </div>
+            </Alert>
 
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="payerEmail">
@@ -90,7 +89,7 @@ export function Payment({ service, discountPercent, discountCode }: { service: S
 
                 <div className="d-grid">
                     <Button variant="primary" type="submit" size="lg" disabled={loading}>
-                        {loading ? 'Wysyłanie...' : `Wyślij paragon z linkiem do płatności na e-mail`}
+                        {loading ? 'Wysyłanie...' : `Wyślij link do płatności`}
                     </Button>
                 </div>
             </Form>

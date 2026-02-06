@@ -89,7 +89,7 @@ function ReturningPatientContinuation({ service, setService }: SelectionProps) {
     return (
         <>
             <ServiceChoice
-                question="Wybierz formę kontynuacji:"
+                question="Wybierz formę kontynuacji"
                 options={[
                     {
                         id: "returning_continuation_prescription",

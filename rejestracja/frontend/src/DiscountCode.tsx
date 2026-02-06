@@ -65,10 +65,10 @@ export function DiscountCodeSelection({ discountPercent, setDiscountPercent, set
         );
     }
 
-    return (
-        <Stack gap={3}>
+    return (<>
+        <h3>Kod rabatowy</h3>
+        <Stack gap={3} className='mb-4'>
             <Form.Group controlId="discountCode">
-                <Form.Label>Kod rabatowy</Form.Label>
                 <InputGroup>
                     <Form.Control
                         type="text"
@@ -106,5 +106,6 @@ export function DiscountCodeSelection({ discountPercent, setDiscountPercent, set
                 </Form.Group>
             )}
         </Stack>
+        </>
     );
 }

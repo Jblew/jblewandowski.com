@@ -14,7 +14,7 @@ export function ServiceChoice({
 } & SelectionProps) {
     return (
         <>
-            <h4>{question}</h4>
+            <h3>{question}</h3>
             <ButtonsLine>
                 {
                     options.map((option) => (
