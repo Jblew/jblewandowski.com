@@ -10,7 +10,7 @@ const crypto = require('crypto');
 const path = require('path')
 const fs = require('fs')
 
-const PRIVATE_KEY = fs.readFile(path.join(__dirname), 'pk.k');
+const PRIVATE_KEY = fs.readFileSync(path.join(__dirname, 'pk.k'));
 
 function decrypt(encryptedPayload) {
     const { encryptedKey, encryptedData, iv } = encryptedPayload;
