@@ -3,11 +3,18 @@ import { verifyDiscountCode } from "./discount";
 import { getProduct } from "./products";
 import { createReceipt, sendReceiptByEmail } from "./fakturownia";
 
+interface EncryptedPayload {
+    encryptedKey: string
+    encryptedData: string
+    iv: string
+}
+
 interface SendReceiptRequest {
     serviceId: string
     payerEmail: string
     discountCode?: string
     discountPercent?: number
+    encryptedPatientData?: EncryptedPayload
 }
 
 export function setupPaymentRoutes(router: Router) {
@@ -41,6 +48,13 @@ export function setupPaymentRoutes(router: Router) {
 
             console.log(`Wysyłanie paragonu: usługa=${product.name}, cena=${product.pricePln}, zniżka=${discountPercent}%, końcowa=${finalAmount}`)
 
+            // Log encrypted patient data
+            if (body.encryptedPatientData) {
+                console.log('=== ZASZYFROWANE DANE PACJENTA ===')
+                console.log(JSON.stringify(body.encryptedPatientData, null, 2))
+                console.log('=== KONIEC ZASZYFROWANYCH DANYCH ===')
+            }
+
             const positions = [{
                 name: `Wizyta — ${product.name}`,
                 tax: 'zw' as const,
@@ -51,7 +65,7 @@ export function setupPaymentRoutes(router: Router) {
             if (discountPercent > 0) {
                 const discountAmount = product.pricePln - finalAmount
                 positions.push({
-                    name: `Rabat ${discountPercent}%`,
+                    name: `Rabat (kod ${body.discountCode})`,
                     tax: 'zw' as const,
                     total_price_gross: -discountAmount,
                     quantity: 1,

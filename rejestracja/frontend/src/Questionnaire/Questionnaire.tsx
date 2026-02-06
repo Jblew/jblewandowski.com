@@ -1,6 +1,10 @@
 import { useState } from 'react';
-import type { SelectionProps } from './types';
+import type { RequiredData, SelectionProps } from './types';
 import { ButtonsLine, SelectionButton, ServiceChoice } from './utils';
+
+const ONLINE_VISIT: RequiredData = { appointmentDate: true, address: false, prescriptionInfo: false };
+const HOME_VISIT: RequiredData = { appointmentDate: true, address: true, prescriptionInfo: false };
+const PRESCRIPTION: RequiredData = { appointmentDate: false, address: false, prescriptionInfo: true };
 
 /*
 ```mermaid
@@ -97,6 +101,7 @@ function ReturningPatientContinuation({ service, setService }: SelectionProps) {
                         description: "Przedłużenie recepty po analizie dokumentacji.",
                         durationMinutes: null,
                         pricePln: 15,
+                        requiredData: PRESCRIPTION,
                     },
                     {
                         id: "returning_continuation_phone",
@@ -104,6 +109,7 @@ function ReturningPatientContinuation({ service, setService }: SelectionProps) {
                         description: "Rozmowa telefoniczna dotycząca dalszego leczenia.",
                         durationMinutes: 15,
                         pricePln: 40,
+                        requiredData: ONLINE_VISIT,
                     },
                     {
                         id: "returning_continuation_video",
@@ -111,6 +117,7 @@ function ReturningPatientContinuation({ service, setService }: SelectionProps) {
                         description: "Teleporada wideo dotycząca kontynuacji leczenia.",
                         durationMinutes: 15,
                         pricePln: 40,
+                        requiredData: ONLINE_VISIT,
                     },
                     {
                         id: "returning_continuation_home_visit",
@@ -118,6 +125,7 @@ function ReturningPatientContinuation({ service, setService }: SelectionProps) {
                         description: "Kontynuacja leczenia podczas wizyty domowej.",
                         durationMinutes: 30,
                         pricePln: 175,
+                        requiredData: HOME_VISIT,
                     },
                 ]}
                 service={service}
@@ -139,6 +147,7 @@ function ReturningPatientNewProblem({ service, setService }: SelectionProps) {
                         description: "Teleporada wideo dotycząca nowego problemu.",
                         durationMinutes: 30,
                         pricePln: 80,
+                        requiredData: ONLINE_VISIT,
                     },
                     {
                         id: "returning_new_problem_home_visit",
@@ -146,6 +155,7 @@ function ReturningPatientNewProblem({ service, setService }: SelectionProps) {
                         description: "Wizyta domowa w celu diagnostyki nowego problemu.",
                         durationMinutes: 30,
                         pricePln: 200,
+                        requiredData: HOME_VISIT,
                     },
                 ]}
                 service={service}
@@ -193,6 +203,7 @@ function NewPatientFullDocumentation({ service, setService }: SelectionProps) {
                     description: "Szczegółowa teleporada z omawianiem dokumentacji.",
                     durationMinutes: 60,
                     pricePln: 120,
+                    requiredData: ONLINE_VISIT,
                 },
                 {
                     id: "new_patient_full_home_visit",
@@ -200,6 +211,7 @@ function NewPatientFullDocumentation({ service, setService }: SelectionProps) {
                     description: "Wizyta domowa w promieniu 5 km od adresu.",
                     durationMinutes: 75,
                     pricePln: 250,
+                    requiredData: HOME_VISIT,
                 },
             ]}
             service={service}
@@ -219,6 +231,7 @@ function NewPatientSingleConsultation({ service, setService }: SelectionProps) {
                     description: "Teleporada dotycząca konkretnego problemu.",
                     durationMinutes: 30,
                     pricePln: 80,
+                    requiredData: ONLINE_VISIT,
                 },
                 {
                     id: "new_patient_single_home_visit",
@@ -226,6 +239,7 @@ function NewPatientSingleConsultation({ service, setService }: SelectionProps) {
                     description: "Wizyta domowa dotycząca konkretnego problemu.",
                     durationMinutes: 45,
                     pricePln: 200,
+                    requiredData: HOME_VISIT,
                 },
             ]}
             service={service}

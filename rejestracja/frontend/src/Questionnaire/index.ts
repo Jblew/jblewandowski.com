@@ -1,2 +1,2 @@
 export { Questionnaire } from './Questionnaire'
-export { type ServiceSelection } from './types'
+export { type ServiceSelection, type PatientData, type RequiredData } from './types'

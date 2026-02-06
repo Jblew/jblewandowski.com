@@ -35,11 +35,18 @@ export async function verifyDiscountCode(code: string): Promise<DiscountCodeResp
     return resp.data
 }
 
+export interface EncryptedPayload {
+    encryptedKey: string
+    encryptedData: string
+    iv: string
+}
+
 export interface SendReceiptRequest {
     serviceId: string
     payerEmail: string
     discountCode?: string
     discountPercent?: number
+    encryptedPatientData?: EncryptedPayload
 }
 
 export interface SendReceiptResponse {

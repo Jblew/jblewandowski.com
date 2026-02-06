@@ -4,15 +4,43 @@ import Button from "react-bootstrap/Button"
 import Form from "react-bootstrap/Form"
 import Alert from "react-bootstrap/Alert"
 import type { ServiceSelection } from "./Questionnaire"
+import type { PatientData } from "./Questionnaire/types"
 import { sendReceipt } from "./services"
+import { PatientDataForm } from "./PatientDataForm"
+import { encryptData } from "./encryption"
 
 export function Payment({ service, discountPercent, discountCode }: { service: ServiceSelection, discountPercent: number, discountCode: string | null }) {
     const [payerEmail, setPayerEmail] = useState('')
+    const [patientData, setPatientData] = useState<PatientData>({
+        name: '',
+        phone: '',
+        suggestedDates: '',
+        address: '',
+        medications: '',
+        healthDescription: '',
+        comment: '',
+    })
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState<string | null>(null)
     const [sent, setSent] = useState(false)
 
     const pricePln = Math.max(1, Math.round(service.pricePln * (100 - discountPercent) / 100))
+
+    const validatePatientData = (): string | null => {
+        if (!patientData.name.trim()) return 'Podaj imię i nazwisko'
+        if (!patientData.phone.trim()) return 'Podaj numer telefonu'
+        if (service.requiredData.appointmentDate && !patientData.suggestedDates?.trim()) {
+            return 'Podaj proponowane terminy wizyty'
+        }
+        if (service.requiredData.address && !patientData.address?.trim()) {
+            return 'Podaj adres wizyty domowej'
+        }
+        if (service.requiredData.prescriptionInfo) {
+            if (!patientData.medications?.trim()) return 'Podaj leki do przedłużenia'
+            if (!patientData.healthDescription?.trim()) return 'Opisz stan zdrowia'
+        }
+        return null
+    }
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault()
@@ -23,13 +51,21 @@ export function Payment({ service, discountPercent, discountCode }: { service: S
             return
         }
 
+        const validationError = validatePatientData()
+        if (validationError) {
+            setError(validationError)
+            return
+        }
+
         setLoading(true)
         try {
+            const encryptedPatientData = await encryptData(patientData)
             await sendReceipt({
                 serviceId: service.id,
                 payerEmail,
                 discountCode: discountCode ?? undefined,
                 discountPercent: discountCode ? discountPercent : undefined,
+                encryptedPatientData,
             })
             setSent(true)
         } catch (err) {
@@ -70,8 +106,15 @@ export function Payment({ service, discountPercent, discountCode }: { service: S
             </Alert>
 
             <Form onSubmit={handleSubmit}>
+                <PatientDataForm
+                    service={service}
+                    patientData={patientData}
+                    setPatientData={setPatientData}
+                    disabled={loading}
+                />
+
                 <Form.Group className="mb-3" controlId="payerEmail">
-                    <Form.Label>Adres e-mail</Form.Label>
+                    <Form.Label>Adres e-mail <span className="text-danger">*</span></Form.Label>
                     <Form.Control
                         type="email"
                         placeholder="jan.kowalski@example.com"
